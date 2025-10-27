@@ -20,9 +20,9 @@ app_license = "mit"
 # 		"has_permission": "bloodtestnearme.api.permission.has_app_permission"
 # 	}
 # ]
-from bloodtestnearme.api.swagger_ui import swaggerui_blueprint
+#from bloodtestnearme.api.swagger_ui import swaggerui_blueprint
 
-
+#
 override_whitelisted_methods = {
     "bloodtestnearme.api.pincodes_api.get_pincodes": "bloodtestnearme.api.pincodes_api.get_pincodes",
     "bloodtestnearme.api.search_api.global_quick_search": "bloodtestnearme.api.search_api.global_quick_search",
@@ -54,7 +54,7 @@ app_include_api = [
 # }
 
 
-app_include_blueprints = [swaggerui_blueprint]
+#app_include_blueprints = [swaggerui_blueprint]
 #app_include_blueprints = ["bloodtestnearme.api.swagger_ui.get_blueprints"]
 
 # Includes in <head>
