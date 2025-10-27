@@ -6,6 +6,10 @@ app_email = "admin@quantumberg.com"
 app_license = "mit"
 
 required_apps = ["frappe"]
+
+modules = {
+    "Bloodtestnearme": "bloodtestnearme.bloodtestnearme"
+}
 # Apps
 # ------------------
 # 
