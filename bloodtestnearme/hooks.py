@@ -43,9 +43,9 @@ override_whitelisted_methods = {
     
 }
 
-app_include_api = [
-    "bloodtestnearme.api.package"
-]
+# app_include_api = [
+#     "bloodtestnearme.api.package"
+# ]
 
 # doc_events = {
 #     "Affiliated Marketing": {
