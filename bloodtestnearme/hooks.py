@@ -5,6 +5,7 @@ app_description = "App to manage blood tests, labs, and patient bookings"
 app_email = "admin@quantumberg.com"
 app_license = "mit"
 
+required_apps = ["frappe"]
 # Apps
 # ------------------
 # 
