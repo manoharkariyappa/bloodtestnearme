@@ -7,7 +7,7 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
+# 
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
@@ -38,7 +38,6 @@ override_whitelisted_methods = {
     "bloodtestnearme.api.order_api.create_order": "bloodtestnearme.api.order_api.create_order",
     "bloodtestnearme.api.certifications.get_certifications": "bloodtestnearme.api.certifications.get_certifications",
     
-
 
     
 }
