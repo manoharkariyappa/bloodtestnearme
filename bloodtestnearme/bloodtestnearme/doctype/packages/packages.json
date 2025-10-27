@@ -18,6 +18,7 @@
   "is_active",
   "order_sequence",
   "package_name",
+  "image",
   "column_break_euse",
   "actual_price",
   "discounted_price",
@@ -30,9 +31,7 @@
   "title",
   "meta_description",
   "meta_keyword",
-  "header_tag",
-  "package_category_section",
-  "pacakge_category"
+  "header_tag"
  ],
  "fields": [
   {
@@ -185,21 +184,15 @@
    "search_index": 1
   },
   {
-   "fieldname": "package_category_section",
-   "fieldtype": "Section Break",
-   "label": "Package Category"
-  },
-  {
-   "fieldname": "pacakge_category",
-   "fieldtype": "Table",
-   "label": "Pacakge category",
-   "options": "Package Category"
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-20 22:08:45.760569",
+ "modified": "2025-10-27 12:39:38.998678",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Packages",

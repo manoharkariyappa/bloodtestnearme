@@ -7,6 +7,7 @@ def get_all_packages():
         "Packages",
         fields=[
             "name1",
+            "image",
             "package_name",
             "category",
             "testing_type",
@@ -40,6 +41,7 @@ def get_packages_by_category(category):
         "Packages",
         fields=[
             "name1",
+            "image",
             "package_name",
             "category",
             "testing_type",
@@ -84,6 +86,7 @@ def get_packages(category=None, package_name=None):
             filters=filters,
             fields=[
                 "name1",
+                "image",
                 "category",
                 "testing_type",
                 "actual_price",
@@ -153,6 +156,7 @@ def get_most_booking_packages():
             "actual_price",
             "discounted_price",
             "url",
+            "image",
             # "tags"
         ]
     )
@@ -180,6 +184,7 @@ def get_most_booking_tests():
             "actual_price",
             "discounted_price",
             "url",
+            "image",
             # "tags"
         ]
     )
