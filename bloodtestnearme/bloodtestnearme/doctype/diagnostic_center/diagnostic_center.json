@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-17 15:28:41.436087",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_objb",
+  "diagnostic_center_name",
+  "address",
+  "pincode",
+  "city",
+  "state",
+  "column_break_lmiz",
+  "phone_number",
+  "website",
+  "email_id",
+  "image",
+  "map_embed_link",
+  "services_available_section",
+  "blood_tests",
+  "health_checkups",
+  "ecg",
+  "column_break_nhwq",
+  "scans",
+  "doctor_consultation",
+  "others",
+  "other_services_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_objb",
+   "fieldtype": "Section Break",
+   "label": "Diagnostic Center"
+  },
+  {
+   "fieldname": "diagnostic_center_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Diagnostic Center Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pincode",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lmiz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "Email ID"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "map_embed_link",
+   "fieldtype": "Small Text",
+   "label": "Map Embed Link"
+  },
+  {
+   "fieldname": "services_available_section",
+   "fieldtype": "Section Break",
+   "label": "Services Available"
+  },
+  {
+   "default": "0",
+   "fieldname": "blood_tests",
+   "fieldtype": "Check",
+   "label": "Blood Tests"
+  },
+  {
+   "default": "0",
+   "fieldname": "health_checkups",
+   "fieldtype": "Check",
+   "label": "Health Checkups"
+  },
+  {
+   "default": "0",
+   "fieldname": "ecg",
+   "fieldtype": "Check",
+   "label": "ECG"
+  },
+  {
+   "fieldname": "column_break_nhwq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "scans",
+   "fieldtype": "Check",
+   "label": "Scans"
+  },
+  {
+   "default": "0",
+   "fieldname": "doctor_consultation",
+   "fieldtype": "Check",
+   "label": "Doctor Consultation"
+  },
+  {
+   "default": "0",
+   "fieldname": "others",
+   "fieldtype": "Check",
+   "label": "Others"
+  },
+  {
+   "fieldname": "other_services_details",
+   "fieldtype": "Small Text",
+   "label": "Other Services Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Diagnostic Center",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-17 22:43:03.540737",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Diagnostic Center",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

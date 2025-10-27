@@ -20,6 +20,42 @@ app_license = "mit"
 # 		"has_permission": "bloodtestnearme.api.permission.has_app_permission"
 # 	}
 # ]
+from bloodtestnearme.api.swagger_ui import swaggerui_blueprint
+
+
+override_whitelisted_methods = {
+    "bloodtestnearme.api.pincodes_api.get_pincodes": "bloodtestnearme.api.pincodes_api.get_pincodes",
+    "bloodtestnearme.api.search_api.global_quick_search": "bloodtestnearme.api.search_api.global_quick_search",
+    "bloodtestnearme.api.testcenter_address.get_test_centers":"bloodtestnearme.api.testcenter_address.get_test_centers",
+     "bloodtestnearme.api.testcenter_address.get_test_center":"bloodtestnearme.api.testcenter_address.get_test_center",
+    "bloodtestnearme.api.packages.get_all_packages":"bloodtestnearme.api.packages.get_all_packages",
+    "bloodtestnearme.api.packages.get_packages":"bloodtestnearme.api.packages.get_packages",
+    "bloodtestnearme.api.packages.get_most_booking_packages": "bloodtestnearme.api.packages.get_most_booking_packages",
+    "bloodtestnearme.api.packages.get_most_booking_tests": "bloodtestnearme.api.packages.get_most_booking_tests",
+    "bloodtestnearme.api.packages.get_packages_by_category":"bloodtestnearme.api.packages.get_packages_by_category",
+    "bloodtestnearme.api.packages.get_package_by_name":"bloodtestnearme.api.packages.get_package_by_name",
+    "bloodtestnearme.api.diagnostic_center.get_accepted_diagnostic_centers": "bloodtestnearme.api.diagnostic_center.get_accepted_diagnostic_centers",
+    "bloodtestnearme.api.order_api.create_order": "bloodtestnearme.api.order_api.create_order",
+    "bloodtestnearme.api.certifications.get_certifications": "bloodtestnearme.api.certifications.get_certifications",
+    
+
+
+    
+}
+
+app_include_api = [
+    "bloodtestnearme.api.package"
+]
+
+# doc_events = {
+#     "Affiliated Marketing": {
+#         "before_save": "bloodtestnearme.bloodtestnearme.doctype.affiliated_marketing.affiliated_marketing.generate_qr"
+#     }
+# }
+
+
+app_include_blueprints = [swaggerui_blueprint]
+#app_include_blueprints = ["bloodtestnearme.api.swagger_ui.get_blueprints"]
 
 # Includes in <head>
 # ------------------
