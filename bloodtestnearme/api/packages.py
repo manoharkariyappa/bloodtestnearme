@@ -157,7 +157,7 @@ def get_most_booking_packages():
             "discounted_price",
             "url",
             "image",
-            # "tags"
+             "tags"
         ]
     )
 
@@ -185,7 +185,7 @@ def get_most_booking_tests():
             "discounted_price",
             "url",
             "image",
-            # "tags"
+            "tags"
         ]
     )
 
@@ -195,3 +195,103 @@ def get_most_booking_tests():
     ]
 
     return related_tests
+
+
+@frappe.whitelist(allow_guest=True)
+def get_individual_packages():
+    """
+    Fetch all active packages where Testing Type = 'Individual'
+    
+    Example:
+        /api/method/bloodtestnearme.api.packages.get_individual_packages
+    """
+    try:
+        packages = frappe.get_all(
+            "Packages",
+            filters={
+                "is_active": 1,
+                "testing_type": "Individual"
+            },
+            fields=[
+                "name1",
+                "image",
+                "category",
+                "testing_type",
+                "actual_price",
+                "discounted_price",
+                "number_of_test",
+                "package_name",
+                "description",
+                "sample_type",
+                "in_house",
+                "fasting_required",
+                "url",
+                "doctor_consultation",
+                "meta_description",
+                "meta_keyword",
+                "header_tag",
+                "list_include",
+                "booking_procedure"
+            ],
+            order_by="order_sequence asc"
+        )
+
+        return {
+            "status": "success",
+            "count": len(packages),
+            "data": packages
+        }
+
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Get Individual Packages API Error")
+        return {"status": "error", "message": str(e)}
+
+@frappe.whitelist(allow_guest=True)
+def get_package_based_tests():
+    """
+    Fetch all active packages where Testing Type = 'Packages'
+    
+    Example:
+        /api/method/bloodtestnearme.api.packages.get_package_based_tests
+    """
+    try:
+        packages = frappe.get_all(
+            "Packages",
+            filters={
+                "is_active": 1,
+                "testing_type": "Packages"
+            },
+            fields=[
+                "name1",
+                "image",
+                "category",
+                "testing_type",
+                "actual_price",
+                "discounted_price",
+                "number_of_test",
+                "package_name",
+                "description",
+                "sample_type",
+                "in_house",
+                "fasting_required",
+                "url",
+                "doctor_consultation",
+                "meta_description",
+                "meta_keyword",
+                "header_tag",
+                "list_include",
+                "booking_procedure"
+            ],
+            order_by="order_sequence asc"
+        )
+
+        return {
+            "status": "success",
+            "count": len(packages),
+            "data": packages
+        }
+
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Get Package-based Tests API Error")
+        return {"status": "error", "message": str(e)}
+
