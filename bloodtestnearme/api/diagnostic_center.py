@@ -48,7 +48,7 @@ def get_accepted_diagnostic_centers():
         city = frappe.form_dict.get("city")
 
         # Base filter
-        filters = {"workflow_state": "Accepted"}
+        filters = {"status": "Accepted"}
 
         # Add optional filters if present
         if pincode:
@@ -63,7 +63,7 @@ def get_accepted_diagnostic_centers():
             fields=[
                 "name",
                 "diagnostic_center_name",
-                "workflow_state",
+                "status",
                 "address",
                 "city",
                 "state",
@@ -125,7 +125,7 @@ def create_diagnostic_center():
                 doc.set(field, data.get(field))
 
         # ✅ Explicitly set workflow_state to "Created"
-        doc.workflow_state = "Created"
+        doc.status = "Created"
 
         # Insert but don't submit
         doc.insert(ignore_permissions=True)
@@ -134,7 +134,7 @@ def create_diagnostic_center():
             "status": "success",
             "message": "Diagnostic Center created successfully",
             "name": doc.name,
-            "workflow_state": doc.workflow_state
+            "status": doc.status
         }
 
     except Exception as e:

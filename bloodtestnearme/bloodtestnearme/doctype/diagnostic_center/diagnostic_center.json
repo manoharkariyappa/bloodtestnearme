@@ -17,6 +17,7 @@
   "email_id",
   "image",
   "map_embed_link",
+  "status",
   "services_available_section",
   "blood_tests",
   "health_checkups",
@@ -157,13 +158,18 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nCreated\nAccepted\nRejected\nDeleted"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-10-17 22:43:03.540737",
+ "modified": "2025-10-29 16:05:11.410358",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Diagnostic Center",
@@ -179,7 +185,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   }
  ],
