@@ -47,6 +47,9 @@ def create_order():
         else:
             order.customer_details = customer_details
 
+        # Set default status as "Created"
+        order.status = "Created"
+
         # Timestamps
         order.created_date = now_datetime()
         order.updated_date = now_datetime()
@@ -55,7 +58,8 @@ def create_order():
         order.insert(ignore_permissions=True)
         frappe.db.commit()
 
-        return {"status": "success", "order_id": order.name}
+        # return {"status": "success", "Your order is Submitted Successfully": order.name1}
+        return {"status": "success", "successmessage": "Your order is submitted successfully"}
 
     except Exception as e:
         frappe.db.rollback()
