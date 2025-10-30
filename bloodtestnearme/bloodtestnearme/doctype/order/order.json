@@ -108,7 +108,7 @@
   },
   {
    "fieldname": "appointment_time",
-   "fieldtype": "Time",
+   "fieldtype": "Data",
    "label": "Appointment Time",
    "reqd": 1
   },
@@ -173,7 +173,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-10-20 21:33:24.442385",
+ "modified": "2025-10-30 12:26:15.681075",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",
