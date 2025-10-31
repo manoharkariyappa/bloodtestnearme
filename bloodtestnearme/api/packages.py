@@ -21,6 +21,7 @@ def get_all_packages():
             "is_active",
             "reference_link",
             "url",
+            "title",
             "meta_description",
             "meta_keyword",
             "header_tag"
@@ -62,7 +63,7 @@ def get_packages_by_category(category):
     return packages
 
 @frappe.whitelist(allow_guest=True)
-def get_packages(category=None, package_name=None):
+def get_packages(category=None, package_name=None, url=None):
     """
     Public API to fetch packages.
     
@@ -73,13 +74,16 @@ def get_packages(category=None, package_name=None):
         /api/method/bloodtestnearme.api.packages.get_packages
         /api/method/bloodtestnearme.api.packages.get_packages?category=Male
         /api/method/bloodtestnearme.api.packages.get_packages?package_name=Packages
+        /api/method/bloodtestnearme.api.packages.get_packages?url=exampleurl
     """
     try:
         filters = {"is_active": 1}
         if category:
             filters["category"] = category
         if package_name:
-            filters["package_name"] = package_name
+            filters["name1"] = package_name
+        if package_name:
+            filters["url"] = package_name
 
         packages = frappe.get_all(
             "Packages",
@@ -99,6 +103,7 @@ def get_packages(category=None, package_name=None):
                 "fasting_required",
                 "url",
                 "doctor_consultation",
+                "title",
                 "meta_description",
                 "meta_keyword",
                 "header_tag",
@@ -157,7 +162,8 @@ def get_most_booking_packages():
             "discounted_price",
             "url",
             "image",
-             "tags"
+             "tags",
+             "title"
         ]
     )
 
@@ -185,7 +191,8 @@ def get_most_booking_tests():
             "discounted_price",
             "url",
             "image",
-            "tags"
+            "tags",
+            "title"
         ]
     )
 
@@ -227,6 +234,7 @@ def get_individual_packages():
                 "fasting_required",
                 "url",
                 "doctor_consultation",
+                "title",
                 "meta_description",
                 "meta_keyword",
                 "header_tag",
@@ -276,6 +284,7 @@ def get_package_based_tests():
                 "fasting_required",
                 "url",
                 "doctor_consultation",
+                "title",
                 "meta_description",
                 "meta_keyword",
                 "header_tag",
@@ -294,4 +303,5 @@ def get_package_based_tests():
     except Exception as e:
         frappe.log_error(frappe.get_traceback(), "Get Package-based Tests API Error")
         return {"status": "error", "message": str(e)}
-
+    
+# 

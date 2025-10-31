@@ -79,16 +79,16 @@
   },
   {
    "fieldname": "category",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Category",
-   "options": "Male\nFemale\nOther",
+   "options": "Package Category",
    "search_index": 1
   },
   {
    "fieldname": "testing_type",
    "fieldtype": "Select",
    "label": "Testing Type",
-   "options": "Individual\nPackages",
+   "options": "\nIndividual\nPackages",
    "search_index": 1
   },
   {
@@ -192,7 +192,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-28 11:33:42.272157",
+ "modified": "2025-10-31 15:30:04.780260",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Packages",
