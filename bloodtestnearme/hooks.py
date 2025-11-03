@@ -47,9 +47,6 @@ override_whitelisted_methods = {
     "bloodtestnearme.api.packages.get_package_based_tests":"bloodtestnearme.api.packages.get_package_based_tests",    
     "bloodtestnearme.api.packages.get_individual_packages":"bloodtestnearme.api.packages.get_individual_packages",
 
-
-
-    
 }
 
 # app_include_api = [

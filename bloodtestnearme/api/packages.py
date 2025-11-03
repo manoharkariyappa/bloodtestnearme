@@ -82,8 +82,8 @@ def get_packages(category=None, package_name=None, url=None):
             filters["category"] = category
         if package_name:
             filters["name1"] = package_name
-        if package_name:
-            filters["url"] = package_name
+        if url:
+            filters["url"] = url
 
         packages = frappe.get_all(
             "Packages",
