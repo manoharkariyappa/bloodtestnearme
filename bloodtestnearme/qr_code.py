@@ -1,7 +1,7 @@
 from base64 import b64encode
 from io import BytesIO
 
-import qrcode
+import bloodtestnearme
 
 
 def get_qr_code(data: str) -> str:
@@ -20,7 +20,7 @@ def add_file_info(data: str) -> str:
 
 def get_qr_code_bytes(data, format: str) -> bytes:
 	"""Create a QR code and return the bytes."""
-	img = qrcode.make(data)
+	img = bloodtestnearme.make(data)
 
 	buffered = BytesIO()
 	img.save(buffered, format=format)
