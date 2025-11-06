@@ -29,6 +29,7 @@ def create_order():
         order.number_of_persons = data.get("number_of_persons")
         order.total_item_price = data.get("total_item_price")
         order.total_price = data.get("total_price")
+        order.affiliated_id = data.get("affiliated_id")
         order.hard_copy_required = data.get("hard_copy_required") or 0
 
         # Handle JSON field - Ordered Items
