@@ -4,6 +4,7 @@ from frappe.utils import now_datetime
 
 @frappe.whitelist(allow_guest=True)
 def create_order():
+    frappe.local.flags.ignore_csrf = True
     try:
         # Parse data from POST body (JSON)
         if frappe.request and frappe.request.data:
