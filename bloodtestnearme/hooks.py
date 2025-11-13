@@ -11,7 +11,6 @@ modules = {
     "Bloodtestnearme": "bloodtestnearme.bloodtestnearme"
 }
 
-after_install = "bloodtestnearme.install.after_install"
 
 
 # app_requires = ["qrcode[pil]", "python-barcode~=0.15.1"]
