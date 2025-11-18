@@ -174,6 +174,58 @@ def get_most_booking_packages():
 
     return related_packages
 
+@frappe.whitelist(allow_guest=True)
+def get_tagby_packages(tags=None):
+    if not tags:
+        return []
+
+    # Convert input tags to lowercase list
+    if isinstance(tags, str):
+        required_tags = [t.strip().lower() for t in tags.split(",")]
+    else:
+        required_tags = [t.lower() for t in tags]
+
+    final_list = []
+
+    # Fetch active packages
+    packages = frappe.get_all(
+        "Packages",
+        filters={"is_active": 1},
+        fields=[
+            "name as id",
+            "name1 as name",
+            "package_name",
+            "actual_price",
+            "discounted_price",
+            "url",
+            "image",
+            "title"
+        ]
+    )
+
+    for pkg in packages:
+        # Fetch child links from child table
+        child_rows = frappe.get_all(
+            "Packages Tags Group",
+            filters={"parent": pkg["id"]},
+            fields=["tags"]
+        )
+
+        # Convert linked IDs to tag_name
+        package_tags = []
+        for row in child_rows:
+            tag_name = frappe.db.get_value("Packages Tags", row["tags"], "tag_name")
+            if tag_name:
+                package_tags.append(tag_name.strip().lower())
+
+        # FINAL MATCHING FIX (Important)
+        if any(tag in package_tags for tag in required_tags):
+            final_list.append(pkg)
+
+    return final_list
+
+
+
 
 @frappe.whitelist(allow_guest=True)
 def get_most_booking_tests():
@@ -203,6 +255,33 @@ def get_most_booking_tests():
 
     return related_tests
 
+@frappe.whitelist(allow_guest=True)
+def get_herosection_packages():
+    """Return list of packages tagged as 'herosection' and active"""
+    data = frappe.get_all(
+        "Packages",
+        filters={
+            "is_active": 1
+        },
+        fields=[
+            "name as id",
+            "name1 as name",
+            "package_name",
+            "actual_price",
+            "discounted_price",
+            "url",
+            "image",
+             "tags",
+             "title"
+        ]
+    )
+
+    related_packages = [
+        pkg for pkg in data
+        if pkg.get("tags") and "herosection" in pkg["tags"].lower()
+    ]
+
+    return related_packages
 
 @frappe.whitelist(allow_guest=True)
 def get_individual_packages():

@@ -23,12 +23,15 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "label": "Image"
+   "label": "Image",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_mqzj",
@@ -37,13 +40,16 @@
   {
    "fieldname": "link",
    "fieldtype": "Data",
-   "label": "Link"
+   "in_list_view": 1,
+   "label": "Link",
+   "reqd": 1
   },
   {
    "default": "0",
    "fieldname": "is_active",
    "fieldtype": "Check",
-   "label": "Is Active"
+   "label": "Is Active",
+   "options": "1"
   },
   {
    "fieldname": "order_by",
@@ -59,7 +65,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-04 10:28:54.858736",
+ "modified": "2025-11-15 09:42:05.891462",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offers",

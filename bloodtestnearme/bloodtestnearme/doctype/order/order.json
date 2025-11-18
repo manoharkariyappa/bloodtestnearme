@@ -28,7 +28,8 @@
   "created_date",
   "updated_date",
   "status",
-  "affiliated_id"
+  "affiliated_id",
+  "order_type"
  ],
  "fields": [
   {
@@ -89,8 +90,9 @@
   },
   {
    "fieldname": "technician_name",
-   "fieldtype": "Data",
-   "label": "Technician Name"
+   "fieldtype": "Table MultiSelect",
+   "label": "Technician Name",
+   "options": "User Group Member"
   },
   {
    "fieldname": "comment",
@@ -120,8 +122,9 @@
   },
   {
    "fieldname": "ordered_items",
-   "fieldtype": "JSON",
+   "fieldtype": "Table",
    "label": "Ordered Items",
+   "options": "Ordered Items",
    "reqd": 1
   },
   {
@@ -156,25 +159,32 @@
   },
   {
    "fieldname": "customer_details",
-   "fieldtype": "Long Text",
-   "label": "Customer Details"
+   "fieldtype": "Table",
+   "label": "Customer Details",
+   "options": "Customer Details"
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nCreated\nConfirmed\nCompleted\nRejected"
+   "options": "\nOrdered\nInprogress\nCompleted\nRejected"
   },
   {
    "fieldname": "affiliated_id",
    "fieldtype": "Data",
    "label": "Affiliated ID"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "\nOffline\nOnline"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-06 09:56:09.660023",
+ "modified": "2025-11-16 13:14:19.287348",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",

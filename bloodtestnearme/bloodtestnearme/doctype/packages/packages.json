@@ -41,13 +41,17 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Name",
+   "reqd": 1,
    "search_index": 1
   },
   {
    "fieldname": "url",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "URL",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -65,17 +69,22 @@
   {
    "fieldname": "description",
    "fieldtype": "Small Text",
-   "label": "Description"
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
   },
   {
    "fieldname": "mouse_hover_description",
    "fieldtype": "Small Text",
-   "label": "Mouse Hover Description"
+   "in_list_view": 1,
+   "label": "Mouse Hover Description",
+   "reqd": 1
   },
   {
    "fieldname": "tags",
-   "fieldtype": "Code",
-   "label": "Tags"
+   "fieldtype": "Table",
+   "label": "Tags",
+   "options": "Packages Tags Group"
   },
   {
    "fieldname": "category",
@@ -89,10 +98,11 @@
    "fieldtype": "Select",
    "label": "Testing Type",
    "options": "\nIndividual\nPackages",
+   "reqd": 1,
    "search_index": 1
   },
   {
-   "default": "0",
+   "default": "1",
    "fieldname": "is_active",
    "fieldtype": "Check",
    "label": "Is Active"
@@ -117,24 +127,28 @@
    "fieldname": "actual_price",
    "fieldtype": "Currency",
    "label": "Actual Price",
+   "reqd": 1,
    "search_index": 1
   },
   {
    "fieldname": "discounted_price",
    "fieldtype": "Currency",
    "label": "Discounted Price",
+   "reqd": 1,
    "search_index": 1
   },
   {
    "fieldname": "number_of_test",
    "fieldtype": "Int",
    "label": "Number Of Test",
+   "reqd": 1,
    "search_index": 1
   },
   {
    "fieldname": "list_include",
    "fieldtype": "Long Text",
-   "label": "List Include"
+   "label": "List Include",
+   "reqd": 1
   },
   {
    "fieldname": "booking_procedure",
@@ -167,9 +181,8 @@
   },
   {
    "fieldname": "meta_description",
-   "fieldtype": "Data",
-   "label": "Meta description",
-   "search_index": 1
+   "fieldtype": "Small Text",
+   "label": "Meta description"
   },
   {
    "fieldname": "meta_keyword",
@@ -186,13 +199,14 @@
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "label": "Image"
+   "label": "Image",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-31 15:30:04.780260",
+ "modified": "2025-11-18 11:58:36.835123",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Packages",
