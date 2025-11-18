@@ -147,8 +147,7 @@
   {
    "fieldname": "list_include",
    "fieldtype": "Long Text",
-   "label": "List Include",
-   "reqd": 1
+   "label": "List Include"
   },
   {
    "fieldname": "booking_procedure",
@@ -206,7 +205,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-18 11:58:36.835123",
+ "modified": "2025-11-18 16:11:59.994928",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Packages",
