@@ -197,14 +197,13 @@
   {
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "label": "Image",
-   "reqd": 1
+   "label": "Image"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-18 16:45:36.905790",
+ "modified": "2025-11-18 16:57:40.417505",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Packages",
