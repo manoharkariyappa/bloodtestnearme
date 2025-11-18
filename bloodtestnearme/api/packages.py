@@ -175,22 +175,26 @@ def get_most_booking_packages():
     return related_packages
 
 @frappe.whitelist(allow_guest=True)
-def get_tagby_packages(tags=None):
-    if not tags:
+def get_packages_by_tags(tag=None):
+    if not tag:
+        return {"error": "tag parameter is required"}
+
+    # 1) Get all parent package names that match the tag
+    package_names = frappe.db.get_all(
+        "Packages Tags Group",
+        filters={"tags": tag},
+        fields=["parent"]
+    )
+
+    if not package_names:
         return []
 
-    # Convert input tags to lowercase list
-    if isinstance(tags, str):
-        required_tags = [t.strip().lower() for t in tags.split(",")]
-    else:
-        required_tags = [t.lower() for t in tags]
+    parents = [d.parent for d in package_names]
 
-    final_list = []
-
-    # Fetch active packages
-    packages = frappe.get_all(
+    # 2) Fetch required package fields
+    packages = frappe.db.get_all(
         "Packages",
-        filters={"is_active": 1},
+        filters={"name": ["in", parents]},
         fields=[
             "name as id",
             "name1 as name",
@@ -203,26 +207,16 @@ def get_tagby_packages(tags=None):
         ]
     )
 
+    # 3) Attach tag list to each package
     for pkg in packages:
-        # Fetch child links from child table
-        child_rows = frappe.get_all(
+        tags = frappe.db.get_all(
             "Packages Tags Group",
             filters={"parent": pkg["id"]},
             fields=["tags"]
         )
+        pkg["tags"] = [t["tags"] for t in tags]
 
-        # Convert linked IDs to tag_name
-        package_tags = []
-        for row in child_rows:
-            tag_name = frappe.db.get_value("Packages Tags", row["tags"], "tag_name")
-            if tag_name:
-                package_tags.append(tag_name.strip().lower())
-
-        # FINAL MATCHING FIX (Important)
-        if any(tag in package_tags for tag in required_tags):
-            final_list.append(pkg)
-
-    return final_list
+    return packages
 
 
 
