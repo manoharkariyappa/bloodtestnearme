@@ -15,15 +15,7 @@ def global_quick_search(query=None):
         ],
         "Package Category": [
             "name1", "title", "description"
-        ],
-        # "Pincodes": [
-        #     "name1", "pincode", "state", "district"
-        # ],
-        # "Family Health Package": ["name1", "description", "category"],
-        # "Family Package Test": ["name1", "description"],
-        # "Order": ["name1", "title", "description"],
-        # "Related Package": ["name1", "description"],
-        # "Testing Object": ["name1", "description", "list_include"]
+        ]
     }
 
     for doctype, fields in doctypes_config.items():
@@ -38,17 +30,28 @@ def global_quick_search(query=None):
             SELECT {', '.join([f'`{f}`' for f in valid_fields])}
             FROM `tab{doctype}`
             WHERE {conditions}
-            LIMIT 10
+            LIMIT 50
         """
 
         try:
             records = frappe.db.sql(sql, {"q": f"%{query}%"}, as_dict=True)
             for rec in records:
-                # Only include non-empty fields
                 filtered = {k: v for k, v in rec.items() if v}
                 if filtered:
                     results.append(filtered)
         except Exception as e:
             frappe.log_error(f"Error in global search ({doctype}): {e}")
+
+
+    def sort_priority(item):
+        for v in item.values():
+            text = str(v).lower()
+            if text.startswith(query):
+                return 0  
+            if query in text:
+                return 1
+        return 2
+
+    results = sorted(results, key=sort_priority)
 
     return results

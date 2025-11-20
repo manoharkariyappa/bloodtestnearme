@@ -191,7 +191,7 @@ def get_packages_by_tags(tag=None):
 
     parents = [d.parent for d in package_names]
 
-    # 2) Fetch required package fields
+    # 2 Fetch required package fields
     packages = frappe.db.get_all(
         "Packages",
         filters={"name": ["in", parents]},
@@ -204,10 +204,11 @@ def get_packages_by_tags(tag=None):
             "url",
             "image",
             "title"
-        ]
+        ],
+         order_by="order_sequence asc"
     )
 
-    # 3) Attach tag list to each package
+    # 3 Attach tag list to each package
     for pkg in packages:
         tags = frappe.db.get_all(
             "Packages Tags Group",
