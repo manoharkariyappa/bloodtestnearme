@@ -27,8 +27,7 @@ def get_all_packages():
             "header_tag"
         ],
         filters={"is_active": 1},
-        # order_by="order_sequence asc"
-        order_by="CASE WHEN order_sequence = 0 THEN 999999 ELSE order_sequence END ASC"
+        order_by="order_sequence asc"
     )
     return packages
 
@@ -59,8 +58,7 @@ def get_packages_by_category(category):
             "url"
         ],
         filters={"category": category, "is_active": 1},
-        # order_by="order_sequence asc"
-        order_by="CASE WHEN order_sequence = 0 THEN 999999 ELSE order_sequence END ASC"
+        order_by="order_sequence asc"
     )
     return packages
 
@@ -112,8 +110,7 @@ def get_packages(category=None, package_name=None, url=None):
                 "list_include",
                 "booking_procedure"
             ],
-            # order_by="order_sequence asc"
-            order_by="CASE WHEN order_sequence = 0 THEN 999999 ELSE order_sequence END ASC"
+            order_by="order_sequence asc"
         )
 
         return {
@@ -209,8 +206,7 @@ def get_packages_by_tags(tag=None):
             "title",
             "order_sequence"
         ],
-        #  order_by="order_sequence asc"
-        order_by="CASE WHEN order_sequence = 0 THEN 999999 ELSE order_sequence END ASC"
+         order_by="order_sequence asc"
     )
 
     # 3 Attach tag list to each package
