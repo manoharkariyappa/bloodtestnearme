@@ -79,7 +79,9 @@ def get_accepted_diagnostic_centers():
                 "doctor_consultation",
                 "others",
                 "other_services_details",
-                "image"
+                "image",
+                "is_phone",
+                "is_website"
             ],
             order_by="modified desc"
         )
@@ -126,7 +128,8 @@ def create_diagnostic_center():
 
         # ✅ Explicitly set workflow_state to "Created"
         doc.status = "Created"
-
+        # doc.is_phone = 1 if data.get("phone_number") else 0
+        # doc.is_website = 1 if data.get("website") else 0
         # Insert but don't submit
         doc.insert(ignore_permissions=True)
 

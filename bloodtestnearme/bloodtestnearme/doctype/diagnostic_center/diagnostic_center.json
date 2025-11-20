@@ -13,7 +13,9 @@
   "state",
   "column_break_lmiz",
   "phone_number",
+  "is_phone",
   "website",
+  "is_website",
   "email_id",
   "image",
   "map_embed_link",
@@ -76,8 +78,7 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Data",
-   "label": "Phone Number",
-   "reqd": 1
+   "label": "Phone Number"
   },
   {
    "fieldname": "website",
@@ -164,12 +165,24 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "\nCreated\nAccepted\nRejected\nDeleted"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_phone",
+   "fieldtype": "Check",
+   "label": "Is Phone"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_website",
+   "fieldtype": "Check",
+   "label": "Is Website"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-29 16:05:11.410358",
+ "modified": "2025-11-20 17:03:35.647842",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Diagnostic Center",
