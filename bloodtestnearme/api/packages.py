@@ -179,7 +179,7 @@ def get_packages_by_tags(tag=None):
     if not tag:
         return {"error": "tag parameter is required"}
 
-    # 1) Get all parent package names that match the tag
+    # 1 Get all parent package names that match the tag
     package_names = frappe.db.get_all(
         "Packages Tags Group",
         filters={"tags": tag},
@@ -203,7 +203,8 @@ def get_packages_by_tags(tag=None):
             "discounted_price",
             "url",
             "image",
-            "title"
+            "title",
+            "order_sequence"
         ],
          order_by="order_sequence asc"
     )
