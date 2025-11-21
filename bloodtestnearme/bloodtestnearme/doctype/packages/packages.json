@@ -140,7 +140,6 @@
    "fieldname": "number_of_test",
    "fieldtype": "Int",
    "label": "Number Of Test",
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -203,7 +202,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-20 13:49:31.549490",
+ "modified": "2025-11-21 15:53:47.520184",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Packages",
