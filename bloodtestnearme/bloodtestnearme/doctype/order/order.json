@@ -28,8 +28,11 @@
   "created_date",
   "updated_date",
   "status",
+  "order_type",
   "affiliated_id",
-  "order_type"
+  "affiliated_user",
+  "amount",
+  "paid"
  ],
  "fields": [
   {
@@ -179,12 +182,28 @@
    "fieldtype": "Select",
    "label": "Order Type",
    "options": "\nOffline\nOnline"
+  },
+  {
+   "fieldname": "affiliated_user",
+   "fieldtype": "Data",
+   "label": "Affiliated User"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-16 13:14:19.287348",
+ "modified": "2025-11-20 21:54:56.118750",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",

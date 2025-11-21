@@ -78,7 +78,8 @@
   {
    "fieldname": "phone_number",
    "fieldtype": "Data",
-   "label": "Phone Number"
+   "label": "Phone Number",
+   "reqd": 1
   },
   {
    "fieldname": "website",
@@ -103,6 +104,7 @@
   {
    "fieldname": "services_available_section",
    "fieldtype": "Section Break",
+   "hidden": 1,
    "label": "Services Available"
   },
   {
@@ -170,19 +172,19 @@
    "default": "0",
    "fieldname": "is_phone",
    "fieldtype": "Check",
-   "label": "Is Phone"
+   "label": "Dispaly Phonenumber"
   },
   {
    "default": "0",
    "fieldname": "is_website",
    "fieldtype": "Check",
-   "label": "Is Website"
+   "label": "Display Website"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-20 17:03:35.647842",
+ "modified": "2025-11-20 21:47:45.908255",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Diagnostic Center",

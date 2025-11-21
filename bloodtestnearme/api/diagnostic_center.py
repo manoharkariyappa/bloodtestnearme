@@ -85,7 +85,9 @@ def get_accepted_diagnostic_centers():
             ],
             order_by="modified desc"
         )
-
+        for center in centers:
+            center["is_phone"] = "Yes" if center.get("is_phone") else "No"
+            center["is_website"] = "Yes" if center.get("is_website") else "No"
         return {
             "status": "success",
             "total": len(centers),
