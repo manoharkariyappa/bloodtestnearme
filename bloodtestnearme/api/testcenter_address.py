@@ -18,27 +18,30 @@ def get_test_centers():
             "email_id",
             "map_embed_link",
             "timings",
-            "image"
+            "image",
+            "description"
         ],
     )
     return centers
 
 
 @frappe.whitelist(allow_guest=True)
-def get_test_center(pincode=None, branch_name=None):
+def get_test_center(pincode=None, branch_name=None, test_center_name=None):
     """
-    Fetch Test Center Address records.
-    - If pincode is provided → filter by pincode
-    - If branch_name is provided → filter by branch name
-    - If neither provided → return all
+    Fetch Test Center Address records with optional filters:
+    - pincode
+    - branch_name
+    - test_center_name
     """
 
     filters = {}
 
     if pincode:
         filters["pincode"] = pincode
-    elif branch_name:
+    if branch_name:
         filters["branch_name"] = branch_name
+    if test_center_name:
+        filters["test_center_name"] = test_center_name
 
     try:
         data = frappe.get_all(
@@ -57,7 +60,8 @@ def get_test_center(pincode=None, branch_name=None):
                 "email_id",
                 "map_embed_link",
                 "timings",
-                "image"
+                "image",
+                "description"
             ]
         )
 
@@ -73,4 +77,3 @@ def get_test_center(pincode=None, branch_name=None):
             "status": "error",
             "message": str(e)
         }
-

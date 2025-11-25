@@ -194,7 +194,8 @@ def get_packages_by_tags(tag=None):
     # 2 Fetch required package fields
     packages = frappe.db.get_all(
         "Packages",
-        filters={"name": ["in", parents]},
+        filters={"name": ["in", parents],
+                  "isactive": 1 },
         fields=[
             "name as id",
             "name1 as name",

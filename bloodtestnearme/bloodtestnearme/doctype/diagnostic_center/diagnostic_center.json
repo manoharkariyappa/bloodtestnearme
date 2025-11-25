@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:diagnostic_center_name",
  "creation": "2025-10-17 15:28:41.436087",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -17,7 +18,6 @@
   "website",
   "is_website",
   "email_id",
-  "image",
   "map_embed_link",
   "status",
   "services_available_section",
@@ -42,7 +42,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Diagnostic Center Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "address",
@@ -90,11 +91,6 @@
    "fieldname": "email_id",
    "fieldtype": "Data",
    "label": "Email ID"
-  },
-  {
-   "fieldname": "image",
-   "fieldtype": "Attach Image",
-   "label": "Image"
   },
   {
    "fieldname": "map_embed_link",
@@ -184,10 +180,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-20 21:47:45.908255",
+ "modified": "2025-11-25 11:00:22.051842",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Diagnostic Center",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

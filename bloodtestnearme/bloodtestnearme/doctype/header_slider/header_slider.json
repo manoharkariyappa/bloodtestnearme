@@ -1,66 +1,50 @@
 {
  "actions": [],
  "autoname": "autoincrement",
- "creation": "2025-10-13 11:37:25.874299",
+ "creation": "2025-11-25 11:14:31.139959",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_ivfz",
-  "name1",
-  "pincode",
-  "state",
-  "district",
-  "isactive"
+  "header_slider_section",
+  "slider_text",
+  "link",
+  "active",
+  "column_break_wxdd"
  ],
  "fields": [
   {
-   "fieldname": "section_break_ivfz",
+   "fieldname": "header_slider_section",
    "fieldtype": "Section Break",
-   "label": "Pincode"
+   "label": "Header Slider"
   },
   {
-   "fieldname": "name1",
+   "fieldname": "slider_text",
    "fieldtype": "Data",
-   "label": "Name",
-   "search_index": 1
+   "label": "Slider text"
   },
   {
-   "fieldname": "pincode",
+   "fieldname": "link",
    "fieldtype": "Data",
-   "in_filter": 1,
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Pincode",
-   "reqd": 1,
-   "search_index": 1
-  },
-  {
-   "fieldname": "state",
-   "fieldtype": "Data",
-   "label": "State",
-   "search_index": 1
-  },
-  {
-   "fieldname": "district",
-   "fieldtype": "Data",
-   "label": "District",
-   "search_index": 1
+   "label": "Link"
   },
   {
    "default": "1",
-   "fieldname": "isactive",
+   "fieldname": "active",
    "fieldtype": "Check",
-   "label": "IsActive"
+   "label": "Active"
+  },
+  {
+   "fieldname": "column_break_wxdd",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-25 11:01:29.822475",
+ "modified": "2025-11-25 11:16:28.420681",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
- "name": "Pincodes",
+ "name": "Header Slider",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
@@ -78,6 +62,7 @@
   }
  ],
  "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

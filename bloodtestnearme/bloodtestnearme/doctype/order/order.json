@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2025-10-14 08:15:01.672716",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -23,7 +23,9 @@
   "number_of_persons",
   "ordered_items",
   "total_item_price",
+  "discount",
   "total_price",
+  "payment_mode",
   "hard_copy_required",
   "created_date",
   "updated_date",
@@ -170,7 +172,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nOrdered\nInprogress\nCompleted\nRejected"
+   "options": "\nOrdered\nInprogress\nCompleted\nDSA\nRejected"
   },
   {
    "fieldname": "affiliated_id",
@@ -198,15 +200,27 @@
    "fieldname": "amount",
    "fieldtype": "Currency",
    "label": "Amount"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "\nUPI\nCash\nCard"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-20 21:54:56.118750",
+ "modified": "2025-11-25 12:46:01.846142",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

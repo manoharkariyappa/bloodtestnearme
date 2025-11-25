@@ -1,6 +1,6 @@
 {
  "actions": [],
- "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2025-10-21 13:52:28.044157",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -38,10 +38,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-15 09:42:45.221311",
+ "modified": "2025-11-25 11:02:54.641432",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Certifications",
+ "naming_rule": "Autoincrement",
  "owner": "Administrator",
  "permissions": [
   {

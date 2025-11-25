@@ -1,0 +1,121 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-11-24 23:28:51.003811",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "job_application_section",
+  "first_name",
+  "middle_name",
+  "last_name",
+  "email",
+  "column_break_edno",
+  "resume",
+  "job_opening",
+  "experience",
+  "contact_number",
+  "description_section",
+  "descriprion"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_application_section",
+   "fieldtype": "Section Break",
+   "label": "Job Application"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_edno",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Resume",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_opening",
+   "fieldtype": "Link",
+   "label": "Job Opening",
+   "options": "Job Opening"
+  },
+  {
+   "fieldname": "experience",
+   "fieldtype": "Data",
+   "label": "Experience",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break",
+   "label": "Description"
+  },
+  {
+   "fieldname": "descriprion",
+   "fieldtype": "Small Text",
+   "label": "Descriprion"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-25 10:53:43.583453",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Job Application",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
