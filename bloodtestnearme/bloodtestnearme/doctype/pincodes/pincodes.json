@@ -1,6 +1,6 @@
 {
     "actions": [],
-    "autoname": "field:name1",
+    "autoname": "field:pincode",
     "creation": "2025-10-13 11:37:25.874299",
     "doctype": "DocType",
     "engine": "InnoDB",
