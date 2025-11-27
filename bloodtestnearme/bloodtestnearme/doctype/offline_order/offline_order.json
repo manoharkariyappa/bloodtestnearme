@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-11-26 13:46:02.832066",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "offline_order_section",
+  "column_break_lyip",
+  "customer_name",
+  "age",
+  "mobile_number",
+  "customer_details",
+  "gender",
+  "email",
+  "doctor_name",
+  "comment",
+  "column_break_znzr",
+  "appointment_date",
+  "appointment_time",
+  "number_of_persons",
+  "ordered_items",
+  "total_item_price",
+  "discount",
+  "total_price",
+  "payment_mode",
+  "created_date",
+  "updated_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "offline_order_section",
+   "fieldtype": "Section Break",
+   "label": "Offline Order"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Mobile Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_details",
+   "fieldtype": "Table",
+   "label": "Customer Details",
+   "options": "Customer Details"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "doctor_name",
+   "fieldtype": "Data",
+   "label": "Doctor Name"
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
+  },
+  {
+   "fieldname": "column_break_znzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "label": "Appointment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "appointment_time",
+   "fieldtype": "Time",
+   "label": "Appointment Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "number_of_persons",
+   "fieldtype": "Int",
+   "label": "Number Of Persons"
+  },
+  {
+   "fieldname": "ordered_items",
+   "fieldtype": "Table",
+   "label": "Ordered Items",
+   "options": "Ordered Items"
+  },
+  {
+   "fieldname": "total_item_price",
+   "fieldtype": "Currency",
+   "label": "Total Item Price"
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "total_price",
+   "fieldtype": "Currency",
+   "label": "Total Price"
+  },
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Select",
+   "label": "Payment Mode",
+   "options": "\nUPI\nCash\nCard"
+  },
+  {
+   "fieldname": "created_date",
+   "fieldtype": "Datetime",
+   "label": "Created Date"
+  },
+  {
+   "fieldname": "updated_date",
+   "fieldtype": "Datetime",
+   "label": "Updated Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Ordered\nInprogress\nCompleted\nDSA\nRejected"
+  },
+  {
+   "fieldname": "column_break_lyip",
+   "fieldtype": "Column Break",
+   "options": "\nmale\nfemale"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-26 16:44:37.454778",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Offline Order",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
