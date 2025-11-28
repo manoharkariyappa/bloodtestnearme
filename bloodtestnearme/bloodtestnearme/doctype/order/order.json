@@ -34,7 +34,8 @@
   "affiliated_id",
   "affiliated_user",
   "amount",
-  "paid"
+  "paid",
+  "source"
  ],
  "fields": [
   {
@@ -95,7 +96,7 @@
   },
   {
    "fieldname": "technician_name",
-   "fieldtype": "Table MultiSelect",
+   "fieldtype": "Table",
    "label": "Technician Name",
    "options": "User Group Member"
   },
@@ -214,12 +215,18 @@
    "in_list_view": 1,
    "label": "Payment Mode",
    "options": "\nUPI\nCash\nCard"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nWalkin\nOnline\nCamp"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-25 15:03:11.704506",
+ "modified": "2025-11-28 10:05:17.978284",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",
