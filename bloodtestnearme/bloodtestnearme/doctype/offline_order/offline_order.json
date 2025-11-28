@@ -27,7 +27,8 @@
   "payment_mode",
   "created_date",
   "updated_date",
-  "status"
+  "status",
+  "source"
  ],
  "fields": [
   {
@@ -159,12 +160,18 @@
    "fieldtype": "Table",
    "label": "Technician Name",
    "options": "User Group Member"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "\nWalkin\nOnline\nCamp"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-28 10:32:14.766634",
+ "modified": "2025-11-28 10:39:34.862880",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
