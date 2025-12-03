@@ -16,6 +16,7 @@
   "doctor_name",
   "technician_name",
   "comment",
+  "branch_name",
   "column_break_znzr",
   "appointment_date",
   "appointment_time",
@@ -166,13 +167,19 @@
    "fieldtype": "Select",
    "label": "Source",
    "options": "\nWalkin\nOnline\nCamp"
+  },
+  {
+   "fieldname": "branch_name",
+   "fieldtype": "Link",
+   "label": "Branch Name",
+   "options": "Company"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-28 10:39:34.862880",
- "modified_by": "Administrator",
+ "modified": "2025-12-03 16:26:19.811845",
+ "modified_by": "trigunaadmin@gmail.com",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
  "naming_rule": "Autoincrement",
