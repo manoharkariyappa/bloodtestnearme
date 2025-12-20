@@ -101,7 +101,7 @@ def get_packages(category=None, package_name=None, url=None):
             "Packages",
             filters=filters,
             fields=[
-                "name1 as package_name",
+                "name1",
                 "image",
                 "category",
                 "testing_type",
