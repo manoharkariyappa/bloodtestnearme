@@ -62,39 +62,26 @@ def get_packages_by_category(category):
     )
     return packages
 
-
 @frappe.whitelist(allow_guest=True)
 def get_packages(category=None, package_name=None, url=None):
     """
     Public API to fetch packages.
-
-    category  -> Package Category.url
-    package_name -> Packages.name1
-    url -> Packages.url
+    
+    - If no params: returns all active packages.
+    - If `category` or `testing_type` is provided: filters results accordingly.
+    
+    Example:
+        /api/method/bloodtestnearme.api.packages.get_packages
+        /api/method/bloodtestnearme.api.packages.get_packages?category=Male
+        /api/method/bloodtestnearme.api.packages.get_packages?package_name=Packages
+        /api/method/bloodtestnearme.api.packages.get_packages?url=exampleurl
     """
-
     try:
         filters = {"is_active": 1}
-
         if category:
-            category_name = frappe.get_value(
-                "Package Category",
-                {"url": category, "is_active": 1},
-                "name1"
-            )
-
-            if not category_name:
-                return {
-                    "status": "success",
-                    "count": 0,
-                    "data": []
-                }
-
-            filters["category"] = category_name
-
+            filters["category"] = category
         if package_name:
             filters["name1"] = package_name
-
         if url:
             filters["url"] = url
 
@@ -102,18 +89,19 @@ def get_packages(category=None, package_name=None, url=None):
             "Packages",
             filters=filters,
             fields=[
-                "name1 as package_name",
+                "name1",
                 "image",
                 "category",
                 "testing_type",
                 "actual_price",
                 "discounted_price",
                 "number_of_test",
+                "package_name",
                 "description",
                 "sample_type",
                 "in_house",
                 "fasting_required",
-                "url as package_url",
+                "url",
                 "doctor_consultation",
                 "title",
                 "meta_description",
