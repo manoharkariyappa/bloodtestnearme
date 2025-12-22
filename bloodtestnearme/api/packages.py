@@ -112,7 +112,7 @@ def get_packages(category=None, package_name=None, url=None):
                 "sample_type",
                 "in_house",
                 "fasting_required",
-                "url as package_url",
+                "url",
                 "doctor_consultation",
                 "title",
                 "meta_description",
