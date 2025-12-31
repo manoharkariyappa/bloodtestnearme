@@ -14,6 +14,9 @@
   "city",
   "state",
   "image",
+  "url",
+  "meta_title",
+  "meta_description",
   "column_break_yjhy",
   "contact_number",
   "alternate_contact_number",
@@ -109,13 +112,29 @@
    "fieldname": "description",
    "fieldtype": "Code",
    "label": "Description"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meta_title",
+   "fieldtype": "Data",
+   "label": "Meta Title"
+  },
+  {
+   "fieldname": "meta_description",
+   "fieldtype": "Small Text",
+   "label": "Meta Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-25 11:02:02.682943",
- "modified_by": "Administrator",
+ "modified": "2025-12-31 11:29:06.254848",
+ "modified_by": "manohar.kariyappa@gmail.com",
  "module": "Bloodtestnearme",
  "name": "Test Center Address",
  "naming_rule": "By fieldname",
