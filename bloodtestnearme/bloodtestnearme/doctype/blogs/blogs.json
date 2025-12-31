@@ -122,7 +122,9 @@
   {
    "fieldname": "url",
    "fieldtype": "Data",
-   "label": "URL"
+   "in_list_view": 1,
+   "label": "URL",
+   "reqd": 1
   },
   {
    "fieldname": "meta_title",
@@ -138,7 +140,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-31 11:43:17.082832",
+ "modified": "2025-12-31 11:51:27.381873",
  "modified_by": "manohar.kariyappa@gmail.com",
  "module": "Bloodtestnearme",
  "name": "Blogs",
