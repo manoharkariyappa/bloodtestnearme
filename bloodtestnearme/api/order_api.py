@@ -238,7 +238,7 @@ def create_order():
         return {
             "status": "success",
             "successmessage": "Order created successfully",
-            # "order_id": order.name
+            "order_id": order.name
         }
 
     except Exception as e:
