@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:test_center_name",
  "creation": "2025-10-16 14:56:37.079333",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -36,41 +35,35 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Test Center Name",
-   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "branch_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Branch Name",
-   "reqd": 1
+   "label": "Branch Name"
   },
   {
    "fieldname": "address_line",
    "fieldtype": "Small Text",
    "in_list_view": 1,
-   "label": "Address Line",
-   "reqd": 1
+   "label": "Address Line"
   },
   {
    "fieldname": "pincode",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Pincode",
-   "reqd": 1
+   "label": "Pincode"
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "label": "City",
-   "reqd": 1
+   "label": "City"
   },
   {
    "fieldname": "state",
    "fieldtype": "Data",
-   "label": "State",
-   "reqd": 1
+   "label": "State"
   },
   {
    "fieldname": "column_break_yjhy",
@@ -79,8 +72,7 @@
   {
    "fieldname": "contact_number",
    "fieldtype": "Data",
-   "label": "Contact Number",
-   "reqd": 1
+   "label": "Contact Number"
   },
   {
    "fieldname": "alternate_contact_number",
@@ -90,8 +82,7 @@
   {
    "fieldname": "email_id",
    "fieldtype": "Data",
-   "label": "Email ID",
-   "reqd": 1
+   "label": "Email ID"
   },
   {
    "fieldname": "map_embed_link",
@@ -133,11 +124,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-31 11:29:06.254848",
- "modified_by": "manohar.kariyappa@gmail.com",
+ "modified": "2026-01-07 11:51:28.159811",
+ "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Test Center Address",
- "naming_rule": "By fieldname",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
