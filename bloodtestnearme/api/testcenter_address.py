@@ -24,6 +24,7 @@ def get_test_centers():
             "meta_title",
             "meta_description"
         ],
+        order_by="order_sequence asc"
     )
     return centers
 
@@ -70,7 +71,8 @@ def get_test_center(pincode=None, branch_name=None, test_center_name=None, url=N
                 "url",
                 "meta_title",
                 "meta_description"
-            ]
+            ],
+            order_by="order_sequence asc"
         )
 
         return {

@@ -61,7 +61,8 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "options": "Email"
   },
   {
    "fieldname": "mobile_number",
@@ -224,9 +225,10 @@
   }
  ],
  "grid_page_length": 50,
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-28 10:05:17.978284",
+ "modified": "2026-01-07 18:18:49.360101",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",

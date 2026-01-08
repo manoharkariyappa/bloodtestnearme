@@ -16,6 +16,7 @@
   "url",
   "meta_title",
   "meta_description",
+  "order_sequence",
   "column_break_yjhy",
   "contact_number",
   "alternate_contact_number",
@@ -119,12 +120,17 @@
    "fieldname": "meta_description",
    "fieldtype": "Small Text",
    "label": "Meta Description"
+  },
+  {
+   "fieldname": "order_sequence",
+   "fieldtype": "Int",
+   "label": "Order Sequence"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-07 11:51:28.159811",
+ "modified": "2026-01-07 15:22:02.129048",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Test Center Address",

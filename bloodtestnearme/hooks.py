@@ -55,6 +55,14 @@ override_whitelisted_methods = {
 
 }
 
+
+# doc_events = {
+#     "Order": {
+#         "after_insert": "bloodtestnearme.utils.order_email.send_order_confirmation",
+#          "after_save": "bloodtestnearme.utils.order_report_email.send_report_ready_email"
+#         # or use "on_submit" if you submit the Order
+#     }
+# }
 # app_include_api = [
 #     "bloodtestnearme.api.package"
 # ]
