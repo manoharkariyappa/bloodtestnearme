@@ -1,6 +1,5 @@
 {
  "actions": [],
- "autoname": "autoincrement",
  "creation": "2025-10-14 08:15:01.672716",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -227,11 +226,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-08 13:06:46.391195",
+ "modified": "2026-01-08 15:01:29.781269",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
