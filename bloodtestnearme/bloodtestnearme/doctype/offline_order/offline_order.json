@@ -25,6 +25,7 @@
   "discount",
   "total_price",
   "payment_mode",
+  "hard_copy_required",
   "created_date",
   "updated_date",
   "status",
@@ -91,9 +92,11 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": "Today",
    "fieldname": "appointment_date",
    "fieldtype": "Date",
    "label": "Appointment Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -172,12 +175,18 @@
    "fieldtype": "Link",
    "label": "Branch Name",
    "options": "Company"
+  },
+  {
+   "default": "0",
+   "fieldname": "hard_copy_required",
+   "fieldtype": "Check",
+   "label": "Hard Copy Required"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-08 15:08:03.624307",
+ "modified": "2026-01-09 11:29:17.343498",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",

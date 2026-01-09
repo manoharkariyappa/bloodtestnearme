@@ -5,14 +5,15 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
 <!-- ================= HEADER ================= -->
 <div style="padding:16px;border-bottom:1px solid #e5e7eb;">
   <h2 style="margin:0 0 6px 0;font-size:18px;">
-    Your Diagnostic Test Report Ready
+    Sample Collection Completed
   </h2>
   <p style="margin:0;font-size:13px;">
     Dear {{ doc.customer_name }},
   </p>
   <p style="margin:6px 0 0 0;font-size:13px;line-height:1.5;">
     Thank you for choosing our diagnostic services.
-    Please find the diagnostic test reports for the beneficiaries listed below.
+    We are pleased to inform you that the sample collection has been completed successfully.
+    Please find the attached bill for your reference.
   </p>
 </div>
 
@@ -38,16 +39,17 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
   </div>
 </div>
 
-<!-- ================= REPORT SUMMARY ================= -->
+<!-- ================= COLLECTION SUMMARY ================= -->
 <div style="padding:14px;">
   <div style="border:1px solid #d3d3d3;background:#f9fafb;border-radius:6px;padding:10px;">
     <h3 style="margin:0 0 8px 0;font-size:15px;">
-      Report Summary
+      Collection Summary
     </h3>
 
     <ul style="margin:0;padding-left:14px;font-size:12px;line-height:1.5;">
       <li><b>Booking ID:</b> {{ doc.name }}</li>
-      <li><b>Test / Package:</b>
+      <li>
+        <b>Test / Package:</b>
         {% for item in doc.ordered_items %}
           {{ item.name1 }}{% if not loop.last %}, {% endif %}
         {% endfor %}
@@ -56,6 +58,7 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
         <b>Total Beneficiaries:</b>
         {{ doc.customer_details|length if doc.customer_details else 1 }}
       </li>
+      <li><b>Sample Status:</b> Collected</li>
     </ul>
   </div>
 </div>
@@ -68,9 +71,10 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
     </h3>
 
     <ul style="margin:0;padding-left:14px;font-size:12px;line-height:1.5;">
-      <li>Diagnostic reports are attached with this email.</li>
-      <li>Please consult your physician for medical interpretation.</li>
-      <li>Reports are confidential and intended only for the recipients.</li>
+      <li>Sample collection has been completed successfully.</li>
+      <li>The bill is attached with this email for your reference.</li>
+      <li>Test reports will be shared once the analysis is completed.</li>
+      <li>All information is confidential and intended only for the recipients.</li>
     </ul>
   </div>
 </div>
@@ -94,7 +98,7 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
 <!-- ================= FOOTER TEXT ================= -->
 <div style="padding:14px;font-size:12px;">
   <p style="margin:0;">
-    If you have any questions regarding your reports,
+    If you have any questions regarding your booking or billing,
     our support team will be happy to assist you.
   </p>
   <p style="margin:6px 0 0 0;">
@@ -129,7 +133,6 @@ border-radius:0 0 8px 8px;">
   <p style="margin:4px 0;font-size:11px;color:#dbeafe;">
     © {{ frappe.utils.nowdate()[:4] }} Triguna Healthcare. All rights reserved.
   </p>
-
   <p style="margin:0;font-size:10px;color:#9ca3af;">
     This communication is confidential and intended solely for the recipients.
   </p>

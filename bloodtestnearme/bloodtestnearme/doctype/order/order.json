@@ -174,7 +174,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nOrdered\nInprogress\nCompleted\nDSA\nRejected"
+   "options": "\nOrdered\nInprogress\nCollected\nCompleted\nDSA\nRejected"
   },
   {
    "fieldname": "affiliated_id",
@@ -226,7 +226,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-08 15:01:29.781269",
+ "modified": "2026-01-08 20:50:43.572435",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",
