@@ -227,6 +227,7 @@ def create_order():
 
         # Defaults
         order.status = "Ordered"
+        order.source = "Online"
         order.order_type = data.get("order_type") or "Online"
         order.created_date = now_datetime()
         order.updated_date = now_datetime()
