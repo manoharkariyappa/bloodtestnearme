@@ -40,7 +40,9 @@
   {
    "fieldname": "customer_name",
    "fieldtype": "Data",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Customer Name",
    "reqd": 1
   },
@@ -54,7 +56,9 @@
   {
    "fieldname": "mobile_number",
    "fieldtype": "Data",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Mobile Number",
    "reqd": 1
   },
@@ -75,6 +79,9 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Email"
   },
   {
@@ -96,7 +103,6 @@
    "fieldname": "appointment_date",
    "fieldtype": "Date",
    "label": "Appointment Date",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -186,7 +192,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-09 12:50:41.967406",
+ "modified": "2026-01-09 16:34:27.114815",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
