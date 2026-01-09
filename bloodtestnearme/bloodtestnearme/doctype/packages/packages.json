@@ -1,230 +1,240 @@
 {
-    "actions": [],
-    "allow_rename": 1,
-    "autoname": "field:name1",
-    "title_field": "name1",
-    "creation": "2025-10-15 15:40:15.877708",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "field_order": [
-        "section_break_yxc7",
-        "name1",
-        "url",
-        "sample_type",
-        "doctor_consultation",
-        "description",
-        "mouse_hover_description",
-        "tags",
-        "category",
-        "testing_type",
-        "is_active",
-        "order_sequence",
-        "package_name",
-        "image",
-        "column_break_euse",
-        "actual_price",
-        "discounted_price",
-        "number_of_test",
-        "list_include",
-        "booking_procedure",
-        "in_house",
-        "reference_link",
-        "fasting_required",
-        "title",
-        "meta_description",
-        "meta_keyword",
-        "header_tag"
-    ],
-    "fields": [
-        {
-            "fieldname": "section_break_yxc7",
-            "fieldtype": "Section Break"
-        },
-        {
-            "fieldname": "name1",
-            "fieldtype": "Data",
-            "in_list_view": 1,
-            "label": "Name",
-            "reqd": 1,
-            "search_index": 1
-        },
-        {
-            "fieldname": "url",
-            "fieldtype": "Data",
-            "in_list_view": 1,
-            "label": "URL",
-            "reqd": 1,
-            "search_index": 1
-        },
-        {
-            "fieldname": "sample_type",
-            "fieldtype": "Select",
-            "label": "Sample Type",
-            "options": "\nBlood\nBlood & Urine"
-        },
-        {
-            "fieldname": "doctor_consultation",
-            "fieldtype": "Data",
-            "label": "Doctor Consultation",
-            "search_index": 1
-        },
-        {
-            "fieldname": "description",
-            "fieldtype": "Small Text",
-            "in_list_view": 1,
-            "label": "Description",
-            "reqd": 1
-        },
-        {
-            "fieldname": "mouse_hover_description",
-            "fieldtype": "Small Text",
-            "in_list_view": 1,
-            "label": "Mouse Hover Description"
-        },
-        {
-            "fieldname": "tags",
-            "fieldtype": "Table",
-            "label": "Tags",
-            "options": "Packages Tags Group"
-        },
-        {
-            "fieldname": "category",
-            "fieldtype": "Link",
-            "label": "Category",
-            "options": "Package Category",
-            "search_index": 1
-        },
-        {
-            "fieldname": "testing_type",
-            "fieldtype": "Select",
-            "label": "Testing Type",
-            "options": "\nIndividual\nPackages",
-            "reqd": 1,
-            "search_index": 1
-        },
-        {
-            "default": "1",
-            "fieldname": "is_active",
-            "fieldtype": "Check",
-            "label": "Is Active"
-        },
-        {
-            "fieldname": "order_sequence",
-            "fieldtype": "Int",
-            "label": "Order Sequence",
-            "search_index": 1
-        },
-        {
-            "fieldname": "package_name",
-            "fieldtype": "Data",
-            "label": "Package Name",
-            "search_index": 1
-        },
-        {
-            "fieldname": "column_break_euse",
-            "fieldtype": "Column Break"
-        },
-        {
-            "fieldname": "actual_price",
-            "fieldtype": "Currency",
-            "label": "Actual Price",
-            "reqd": 1,
-            "search_index": 1
-        },
-        {
-            "fieldname": "discounted_price",
-            "fieldtype": "Currency",
-            "label": "Discounted Price",
-            "reqd": 1,
-            "search_index": 1
-        },
-        {
-            "fieldname": "number_of_test",
-            "fieldtype": "Int",
-            "label": "Number Of Test",
-            "search_index": 1
-        },
-        {
-            "fieldname": "list_include",
-            "fieldtype": "Long Text",
-            "label": "List Include"
-        },
-        {
-            "fieldname": "booking_procedure",
-            "fieldtype": "Long Text",
-            "label": "Booking Procedure"
-        },
-        {
-            "default": "0",
-            "fieldname": "in_house",
-            "fieldtype": "Check",
-            "label": "In House"
-        },
-        {
-            "fieldname": "reference_link",
-            "fieldtype": "Data",
-            "label": "Reference Link",
-            "search_index": 1
-        },
-        {
-            "default": "0",
-            "fieldname": "fasting_required",
-            "fieldtype": "Check",
-            "label": "Fasting Required"
-        },
-        {
-            "fieldname": "title",
-            "fieldtype": "Data",
-            "label": "Title",
-            "search_index": 1
-        },
-        {
-            "fieldname": "meta_description",
-            "fieldtype": "Small Text",
-            "label": "Meta description"
-        },
-        {
-            "fieldname": "meta_keyword",
-            "fieldtype": "Data",
-            "label": "Meta Keyword",
-            "search_index": 1
-        },
-        {
-            "fieldname": "header_tag",
-            "fieldtype": "Data",
-            "label": "Header Tag",
-            "search_index": 1
-        },
-        {
-            "fieldname": "image",
-            "fieldtype": "Attach Image",
-            "label": "Image"
-        }
-    ],
-    "grid_page_length": 50,
-    "index_web_pages_for_search": 1,
-    "links": [],
-    "modified": "2025-11-21 15:53:47.520184",
-    "modified_by": "Administrator",
-    "module": "Bloodtestnearme",
-    "name": "Packages",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "row_format": "Dynamic",
-    "sort_field": "modified",
-    "sort_order": "DESC",
-    "states": []
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2025-10-15 15:40:15.877708",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yxc7",
+  "name1",
+  "url",
+  "sample_type",
+  "doctor_consultation",
+  "description",
+  "mouse_hover_description",
+  "tags",
+  "category",
+  "testing_type",
+  "is_active",
+  "order_sequence",
+  "package_name",
+  "image",
+  "offline_package",
+  "column_break_euse",
+  "actual_price",
+  "discounted_price",
+  "number_of_test",
+  "list_include",
+  "booking_procedure",
+  "in_house",
+  "reference_link",
+  "fasting_required",
+  "title",
+  "meta_description",
+  "meta_keyword",
+  "header_tag"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yxc7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "URL",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "sample_type",
+   "fieldtype": "Select",
+   "label": "Sample Type",
+   "options": "\nBlood\nBlood & Urine"
+  },
+  {
+   "fieldname": "doctor_consultation",
+   "fieldtype": "Data",
+   "label": "Doctor Consultation",
+   "search_index": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mouse_hover_description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Mouse Hover Description"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Table",
+   "label": "Tags",
+   "options": "Packages Tags Group"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Package Category",
+   "search_index": 1
+  },
+  {
+   "fieldname": "testing_type",
+   "fieldtype": "Select",
+   "label": "Testing Type",
+   "options": "\nIndividual\nPackages",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "order_sequence",
+   "fieldtype": "Int",
+   "label": "Order Sequence",
+   "search_index": 1
+  },
+  {
+   "fieldname": "package_name",
+   "fieldtype": "Data",
+   "label": "Package Name",
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_euse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actual_price",
+   "fieldtype": "Currency",
+   "label": "Actual Price",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "discounted_price",
+   "fieldtype": "Currency",
+   "label": "Discounted Price",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "number_of_test",
+   "fieldtype": "Int",
+   "label": "Number Of Test",
+   "search_index": 1
+  },
+  {
+   "fieldname": "list_include",
+   "fieldtype": "Long Text",
+   "label": "List Include"
+  },
+  {
+   "fieldname": "booking_procedure",
+   "fieldtype": "Long Text",
+   "label": "Booking Procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "in_house",
+   "fieldtype": "Check",
+   "label": "In House"
+  },
+  {
+   "fieldname": "reference_link",
+   "fieldtype": "Data",
+   "label": "Reference Link",
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "fasting_required",
+   "fieldtype": "Check",
+   "label": "Fasting Required"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "search_index": 1
+  },
+  {
+   "fieldname": "meta_description",
+   "fieldtype": "Small Text",
+   "label": "Meta description"
+  },
+  {
+   "fieldname": "meta_keyword",
+   "fieldtype": "Data",
+   "label": "Meta Keyword",
+   "search_index": 1
+  },
+  {
+   "fieldname": "header_tag",
+   "fieldtype": "Data",
+   "label": "Header Tag",
+   "search_index": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "default": "0",
+   "fieldname": "offline_package",
+   "fieldtype": "Check",
+   "label": "Offline Package"
+  }
+ ],
+ "grid_page_length": 50,
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-09 13:30:19.938403",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Packages",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1"
 }

@@ -26,7 +26,7 @@ def get_all_packages():
             "meta_keyword",
             "header_tag"
         ],
-        filters={"is_active": 1},
+        filters={"is_active": 1,"offline_package": 0},
         order_by="order_sequence asc"
     )
     return packages
@@ -57,7 +57,7 @@ def get_packages_by_category(category):
             "reference_link",
             "url"
         ],
-        filters={"category": category, "is_active": 1},
+        filters={"category": category, "is_active": 1,"offline_package": 0},
         order_by="order_sequence asc"
     )
     return packages
@@ -73,7 +73,7 @@ def get_packages(category=None, package_name=None, url=None):
     """
 
     try:
-        filters = {"is_active": 1}
+        filters = {"is_active": 1,"offline_package": 0}
 
         if category:
             category_name = frappe.get_value(
@@ -147,7 +147,7 @@ def get_package_by_name(package_name):
     package = frappe.get_all(
         "Packages",
         fields=["*"],
-        filters={"package_name": package_name, "is_active": 1},
+        filters={"package_name": package_name, "is_active": 1,"offline_package": 0},
         limit_page_length=1
     )
 
@@ -164,7 +164,7 @@ def get_most_booking_packages():
     data = frappe.get_all(
         "Packages",
         filters={
-            "is_active": 1
+            "is_active": 1,"offline_package": 0
         },
         fields=[
             "name as id",
@@ -206,7 +206,7 @@ def get_packages_by_tags(tag=None):
     # 2 Fetch required package fields
     packages = frappe.db.get_all(
         "Packages",
-        filters={"name": ["in", parents], "is_active": 1},
+        filters={"name": ["in", parents], "is_active": 1,"offline_package": 0},
         fields=[
             "name as id",
             "name1 as name",
@@ -241,7 +241,7 @@ def get_most_booking_tests():
     data = frappe.get_all(
         "Packages",
         filters={
-            "is_active": 1
+            "is_active": 1,"offline_package": 0
         },
         fields=[
             "name as id",
@@ -269,7 +269,7 @@ def get_herosection_packages():
     data = frappe.get_all(
         "Packages",
         filters={
-            "is_active": 1
+            "is_active": 1,"offline_package": 0
         },
         fields=[
             "name as id",
@@ -304,6 +304,7 @@ def get_individual_packages():
             "Packages",
             filters={
                 "is_active": 1,
+                "offline_package": 0,
                 "testing_type": "Individual"
             },
             fields=[
@@ -354,6 +355,7 @@ def get_package_based_tests():
             "Packages",
             filters={
                 "is_active": 1,
+                "offline_package": 0,
                 "testing_type": "Packages"
             },
             fields=[
