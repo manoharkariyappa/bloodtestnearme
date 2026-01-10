@@ -82,7 +82,8 @@
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Email"
+   "label": "Email",
+   "options": "Email"
   },
   {
    "fieldname": "doctor_name",
@@ -192,7 +193,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-09 16:34:27.114815",
+ "modified": "2026-01-10 00:35:26.646043",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
