@@ -5,15 +5,17 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
 <!-- ================= HEADER ================= -->
 <div style="padding:16px;border-bottom:1px solid #e5e7eb;">
   <h2 style="margin:0 0 6px 0;font-size:18px;">
-    Your Diagnostic Test Appointment is Confirmed
+    Confirmation of Diagnostic Test Appointment Cancellation
   </h2>
   <p style="margin:0;font-size:13px;">
     Dear {{ doc.customer_name }},
   </p>
   <p style="margin:6px 0 0 0;font-size:13px;line-height:1.5;">
-    Thank you for scheduling your diagnostic test with us.
-    Your appointment has been successfully confirmed.
-    Please review the details below.
+    This is to confirm that, as per your request, your diagnostic test appointment has been cancelled successfully.
+    Please find the details of the cancelled appointment below for your records:
+  </p>
+  <p style="margin:6px 0 0 0;font-size:13px;line-height:1.5;">
+    Please find the details of the cancelled appointment below for your records:
   </p>
 </div>
 
@@ -55,7 +57,7 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
 <p style="margin:8px 0 0 0;font-size:12px;line-height:1.4;">
   <b>Phone:</b> {{ doc.mobile_number }}<br>
   <b>Email:</b> {{ doc.email }}<br>
-  <!--<b>Address:</b> {{ doc.address }}, {{ doc.pincode }}-->
+  <b>Address:</b> {{ doc.address }}, {{ doc.pincode }}
 </p>
 
 {% else %}
@@ -65,7 +67,7 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
   <b>Gender:</b> {{ doc.gender }}<br>
   <b>Phone:</b> {{ doc.mobile_number }}<br>
   <b>Email:</b> {{ doc.email }}<br>
-  <!--<b>Address:</b> {{ doc.address }}, {{ doc.pincode }}-->
+  <b>Address:</b> {{ doc.address }}, {{ doc.pincode }}
 </p>
 {% endif %}
   </div>
@@ -84,7 +86,7 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
     </h3>
 
     <ul style="margin:0;padding-left:14px;font-size:12px;line-height:1.5;">
-      <li><b>Booking ID:</b> {{ doc.name }}</li>
+      <li><b>Order ID:</b> {{ doc.name }}</li>
       <li><b>Date:</b> {{ frappe.format_date(doc.appointment_date) }}</li>
       <li><b>Time:</b> {{ doc.appointment_time }}</li>
       <li><b>Test / Package:</b>
@@ -98,36 +100,22 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
 </div>
 
 <!-- ================= PREPARATION INSTRUCTIONS ================= -->
-<div style="padding:14px;">
-  <div style="
-    border:1px solid #d3d3d3;
-    background:#f9fafb;
-    border-radius:6px;
-    padding:10px;
-  ">
-    <h3 style="margin:0 0 8px 0;font-size:15px;">
-      Preparation Instructions
-    </h3>
-
-    <ul style="margin:0;padding-left:14px;font-size:12px;line-height:1.5;">
-      <li>Maintain 8–12 hours of fasting prior to sample collection.</li>
-      <li>Only plain water is permitted during the fasting period.</li>
-      <li>Avoid alcohol and heavy meals the night before your test.</li>
-      <li>Please ensure availability at the provided address during the scheduled time.</li>
-      <li>Reports will be shared digitally via WhatsApp after processing.</li>
-    </ul>
-  </div>
-</div>
 
 <!-- ================= FOOTER TEXT ================= -->
 <div style="padding:14px;font-size:12px;line-height:1.5;">
   <p style="margin:0;">
-    If you need to reschedule or cancel your appointment,
-    please contact us at least <b>2 hours</b> in advance.
+    Should you require any further assistance or wish to reschedule your appointment, please contact
+    our customer support team at your convenience. 
+  </p>
+  <p style="margin:6px 0 0 0;">
+    Thank you for choosing our diagnostic services. 
   </p>
   <p style="margin:6px 0 0 0;">
     Best regards,<br>
-    <b>Customer Support Team</b>
+    <b>Customer Support Team</b>,<br>
+    Thyrocare <br>
+    (Triguna healthcare Services)
+    
   </p>
 </div>
 

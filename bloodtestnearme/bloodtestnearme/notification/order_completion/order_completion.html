@@ -46,7 +46,7 @@ font-family:Arial,Helvetica,sans-serif;color:#111827;">
     </h3>
 
     <ul style="margin:0;padding-left:14px;font-size:12px;line-height:1.5;">
-      <li><b>Booking ID:</b> {{ doc.name }}</li>
+      <li><b>Order ID:</b> {{ doc.name }}</li>
       <li><b>Test / Package:</b>
         {% for item in doc.ordered_items %}
           {{ item.name1 }}{% if not loop.last %}, {% endif %}
