@@ -119,6 +119,8 @@
   {
    "fieldname": "appointment_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Appointment Date",
    "reqd": 1
   },
@@ -217,11 +219,13 @@
    "label": "Discount"
   },
   {
+   "default": "UPI",
    "fieldname": "payment_mode",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Payment Mode",
-   "options": "\nUPI\nCash\nCard"
+   "options": "\nUPI\nCash\nCard",
+   "reqd": 1
   },
   {
    "fieldname": "source",
@@ -233,7 +237,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-10 13:18:05.218591",
+ "modified": "2026-01-21 16:13:57.155844",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",

@@ -1,6 +1,6 @@
 {
  "actions": [],
- "creation": "2025-11-26 13:46:02.832066",
+ "creation": "2026-01-21 12:55:49.852578",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -103,6 +103,8 @@
    "default": "Today",
    "fieldname": "appointment_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Appointment Date",
    "reqd": 1
   },
@@ -142,7 +144,8 @@
    "fieldname": "payment_mode",
    "fieldtype": "Select",
    "label": "Payment Mode",
-   "options": "\nUPI\nCash\nCard"
+   "options": "\nUPI\nCash\nCard",
+   "reqd": 1
   },
   {
    "fieldname": "created_date",
@@ -184,7 +187,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Branch Name",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -196,7 +200,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-10 10:14:07.908573",
+ "modified": "2026-01-21 16:29:29.050111",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
