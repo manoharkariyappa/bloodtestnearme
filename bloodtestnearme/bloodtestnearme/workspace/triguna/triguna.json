@@ -1,0 +1,252 @@
+{
+ "charts": [],
+ "content": "[{\"id\": \"TkR8H3W0z4\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\">Triguna</span>\", \"col\": 12}}, {\"id\": \"JhvvFNi2zG\", \"type\": \"card\", \"data\": {\"card_name\": \"Packages\", \"col\": 4}}, {\"id\": \"7ems4-u41C\", \"type\": \"card\", \"data\": {\"card_name\": \"Offers\", \"col\": 4}}, {\"id\": \"8YpngOEjge\", \"type\": \"card\", \"data\": {\"card_name\": \"Certificates\", \"col\": 4}}, {\"id\": \"uCdWA3-hdo\", \"type\": \"card\", \"data\": {\"card_name\": \"Pincode\", \"col\": 4}}, {\"id\": \"T-LD7VlrXS\", \"type\": \"card\", \"data\": {\"card_name\": \"Careers\", \"col\": 4}}, {\"id\": \"DdSqHp3WRV\", \"type\": \"card\", \"data\": {\"card_name\": \"Affiliated Marketing\", \"col\": 4}}, {\"id\": \"zgkKWByP9N\", \"type\": \"card\", \"data\": {\"card_name\": \"Order\", \"col\": 4}}]",
+ "creation": "2025-10-18 12:02:27.102571",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "healthcare",
+ "idx": 1,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Triguna",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Packages",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Packages",
+   "link_count": 0,
+   "link_to": "Packages",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Packages Tags",
+   "link_count": 0,
+   "link_to": "Packages Tags",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Package Category",
+   "link_count": 0,
+   "link_to": "Package Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Offers",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Promotions",
+   "link_count": 0,
+   "link_to": "Offers",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Header Slider Offer",
+   "link_count": 0,
+   "link_to": "Header Slider",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Certificates",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Certifications",
+   "link_count": 0,
+   "link_to": "Certifications",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pincode",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pincodes",
+   "link_count": 0,
+   "link_to": "Pincodes",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Diagnostic Center",
+   "link_count": 0,
+   "link_to": "Diagnostic Center",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Careers",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Application",
+   "link_count": 0,
+   "link_to": "Job Application",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Job Opening",
+   "link_count": 0,
+   "link_to": "Job Opening",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Affiliated Marketing",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "QR Code Generator  ",
+   "link_count": 0,
+   "link_to": "QR Demo",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Order",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Package Order",
+   "link_count": 0,
+   "link_to": "Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Offline Order",
+   "link_count": 0,
+   "link_to": "Offline Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-01-22 12:57:22.428994",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Triguna",
+ "number_cards": [
+  {
+   "label": "ON-Order",
+   "number_card_name": "Order"
+  },
+  {
+   "label": "ON-Inprogress",
+   "number_card_name": "InProgress"
+  },
+  {
+   "label": "ON-Assigned",
+   "number_card_name": "Assigned"
+  },
+  {
+   "label": "ON-Collected",
+   "number_card_name": "Collected"
+  },
+  {
+   "label": "ON-Completed",
+   "number_card_name": "Completed"
+  },
+  {
+   "label": "ON-DSA",
+   "number_card_name": "DSA"
+  },
+  {
+   "label": "ON-Rejected",
+   "number_card_name": "Rejected"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 33.0,
+ "shortcuts": [],
+ "title": "Triguna"
+}
