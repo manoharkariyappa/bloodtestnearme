@@ -23,6 +23,7 @@
   "ordered_items",
   "total_item_price",
   "discount",
+  "extra_discount",
   "total_price",
   "payment_mode",
   "hard_copy_required",
@@ -195,12 +196,18 @@
    "fieldname": "hard_copy_required",
    "fieldtype": "Check",
    "label": "Hard Copy Required"
+  },
+  {
+   "default": "0",
+   "fieldname": "extra_discount",
+   "fieldtype": "Currency",
+   "label": "Extra Discount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-21 16:29:29.050111",
+ "modified": "2026-01-22 15:31:14.158157",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
