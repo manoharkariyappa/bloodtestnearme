@@ -162,7 +162,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Ordered\nInprogress\nCompleted\nDSA\nRejected"
+   "options": "Ordered\nCompleted"
   },
   {
    "fieldname": "column_break_lyip",
@@ -179,7 +179,7 @@
    "fieldname": "source",
    "fieldtype": "Select",
    "label": "Source",
-   "options": "Walkin\nOnline\nCamp"
+   "options": "Walkin\nCamp"
   },
   {
    "fieldname": "branch_name",
@@ -207,7 +207,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-22 15:31:14.158157",
+ "modified": "2026-01-23 09:17:43.189466",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Offline Order",
