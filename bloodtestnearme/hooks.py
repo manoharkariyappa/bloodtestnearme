@@ -10,10 +10,7 @@ required_apps = ["frappe"]
 modules = {
     "Bloodtestnearme": "bloodtestnearme.bloodtestnearme"
 }
-# Export Workspace as fixture
-fixtures = [
-    "Workspace"
-]
+
 
 
 # app_requires = ["qrcode[pil]", "python-barcode~=0.15.1"]
