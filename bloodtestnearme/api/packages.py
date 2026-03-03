@@ -26,7 +26,7 @@ def get_all_packages():
             "meta_keyword",
             "header_tag"
         ],
-        filters={"is_active": 1},
+        filters={"is_active": 1,"offline_package": 0},
         order_by="order_sequence asc"
     )
     return packages
@@ -57,7 +57,7 @@ def get_packages_by_category(category):
             "reference_link",
             "url"
         ],
-        filters={"category": category, "is_active": 1},
+        filters={"category": category, "is_active": 1,"offline_package": 0},
         order_by="order_sequence asc"
     )
     return packages
@@ -66,22 +66,34 @@ def get_packages_by_category(category):
 def get_packages(category=None, package_name=None, url=None):
     """
     Public API to fetch packages.
-    
-    - If no params: returns all active packages.
-    - If `category` or `testing_type` is provided: filters results accordingly.
-    
-    Example:
-        /api/method/bloodtestnearme.api.packages.get_packages
-        /api/method/bloodtestnearme.api.packages.get_packages?category=Male
-        /api/method/bloodtestnearme.api.packages.get_packages?package_name=Packages
-        /api/method/bloodtestnearme.api.packages.get_packages?url=exampleurl
+
+    category  -> Package Category.url
+    package_name -> Packages.name1
+    url -> Packages.url
     """
+
     try:
-        filters = {"is_active": 1}
+        filters = {"is_active": 1,"offline_package": 0}
+
         if category:
-            filters["category"] = category
+            category_name = frappe.get_value(
+                "Package Category",
+                {"url": category, "is_active": 1},
+                "name1"
+            )
+
+            if not category_name:
+                return {
+                    "status": "success",
+                    "count": 0,
+                    "data": []
+                }
+
+            filters["category"] = category_name
+
         if package_name:
             filters["name1"] = package_name
+
         if url:
             filters["url"] = url
 
@@ -96,7 +108,6 @@ def get_packages(category=None, package_name=None, url=None):
                 "actual_price",
                 "discounted_price",
                 "number_of_test",
-                "package_name",
                 "description",
                 "sample_type",
                 "in_house",
@@ -126,6 +137,7 @@ def get_packages(category=None, package_name=None, url=None):
             "message": str(e)
         }
 
+
 @frappe.whitelist(allow_guest=True)
 def get_package_by_name(package_name):
     """Fetch a single package by its name"""
@@ -135,7 +147,7 @@ def get_package_by_name(package_name):
     package = frappe.get_all(
         "Packages",
         fields=["*"],
-        filters={"package_name": package_name, "is_active": 1},
+        filters={"package_name": package_name, "is_active": 1,"offline_package": 0},
         limit_page_length=1
     )
 
@@ -152,7 +164,7 @@ def get_most_booking_packages():
     data = frappe.get_all(
         "Packages",
         filters={
-            "is_active": 1
+            "is_active": 1,"offline_package": 0
         },
         fields=[
             "name as id",
@@ -194,7 +206,7 @@ def get_packages_by_tags(tag=None):
     # 2 Fetch required package fields
     packages = frappe.db.get_all(
         "Packages",
-        filters={"name": ["in", parents], "is_active": 1},
+        filters={"name": ["in", parents], "is_active": 1,"offline_package": 0},
         fields=[
             "name as id",
             "name1 as name",
@@ -229,7 +241,7 @@ def get_most_booking_tests():
     data = frappe.get_all(
         "Packages",
         filters={
-            "is_active": 1
+            "is_active": 1,"offline_package": 0
         },
         fields=[
             "name as id",
@@ -257,7 +269,7 @@ def get_herosection_packages():
     data = frappe.get_all(
         "Packages",
         filters={
-            "is_active": 1
+            "is_active": 1,"offline_package": 0
         },
         fields=[
             "name as id",
@@ -292,6 +304,7 @@ def get_individual_packages():
             "Packages",
             filters={
                 "is_active": 1,
+                "offline_package": 0,
                 "testing_type": "Individual"
             },
             fields=[
@@ -342,6 +355,7 @@ def get_package_based_tests():
             "Packages",
             filters={
                 "is_active": 1,
+                "offline_package": 0,
                 "testing_type": "Packages"
             },
             fields=[

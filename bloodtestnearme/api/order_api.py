@@ -264,6 +264,7 @@ def create_order():
         order.number_of_persons = data.get("number_of_persons")
         order.total_item_price = data.get("total_item_price")
         order.total_price = data.get("total_price")
+        order.discount = data.get("discount")
         order.affiliated_id = data.get("affiliated_id")
         order.hard_copy_required = data.get("hard_copy_required") or 0
 
@@ -302,6 +303,7 @@ def create_order():
 
         # Defaults
         order.status = "Ordered"
+        order.source = "Online"
         order.order_type = data.get("order_type") or "Online"
         order.created_date = now_datetime()
         order.updated_date = now_datetime()
@@ -313,7 +315,7 @@ def create_order():
         return {
             "status": "success",
             "successmessage": "Order created successfully",
-            # "order_id": order.name
+            "order_id": order.name
         }
 
     except Exception as e:

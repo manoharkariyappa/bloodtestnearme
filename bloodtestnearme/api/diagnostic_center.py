@@ -79,7 +79,7 @@ def get_accepted_diagnostic_centers():
                 "doctor_consultation",
                 "others",
                 "other_services_details",
-                "image",
+                # "image",
                 "is_phone",
                 "is_website"
             ],
@@ -119,7 +119,7 @@ def create_diagnostic_center():
             doc.set(field, data.get(field))
 
         optional_fields = [
-            "website", "email_id", "image", "map_embed_link",
+            "website", "email_id", "map_embed_link",
             "blood_tests", "health_checkups", "ecg",
             "scans", "doctor_consultation", "others", "other_services_details"
         ]

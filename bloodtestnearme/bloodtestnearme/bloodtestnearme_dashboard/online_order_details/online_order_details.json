@@ -1,0 +1,43 @@
+{
+ "cards": [
+  {
+   "card": "Order"
+  },
+  {
+   "card": "InProgress"
+  },
+  {
+   "card": "Assigned"
+  },
+  {
+   "card": "Collected"
+  },
+  {
+   "card": "Completed"
+  },
+  {
+   "card": "DSA"
+  },
+  {
+   "card": "Rejected"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Order Details",
+   "width": "Half"
+  }
+ ],
+ "creation": "2026-01-22 11:49:53.239498",
+ "dashboard_name": "Online Order Details",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2026-01-23 14:03:15.393434",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Online Order Details",
+ "owner": "Administrator"
+}

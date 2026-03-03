@@ -14,6 +14,9 @@
   "sub_description_heading_2",
   "description_2",
   "blog_date",
+  "url",
+  "meta_title",
+  "meta_description",
   "column_break_mqsb",
   "header_image",
   "description_heading_3",
@@ -115,13 +118,30 @@
    "fieldname": "sub_description_heading_4",
    "fieldtype": "Data",
    "label": "Sub Description Heading 4"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meta_title",
+   "fieldtype": "Data",
+   "label": "Meta Title"
+  },
+  {
+   "fieldname": "meta_description",
+   "fieldtype": "Small Text",
+   "label": "Meta Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-25 09:35:18.146679",
- "modified_by": "Administrator",
+ "modified": "2025-12-31 11:51:27.381873",
+ "modified_by": "manohar.kariyappa@gmail.com",
  "module": "Bloodtestnearme",
  "name": "Blogs",
  "naming_rule": "By fieldname",

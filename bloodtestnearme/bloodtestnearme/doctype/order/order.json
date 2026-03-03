@@ -1,6 +1,5 @@
 {
  "actions": [],
- "autoname": "autoincrement",
  "creation": "2025-10-14 08:15:01.672716",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -24,6 +23,7 @@
   "ordered_items",
   "total_item_price",
   "discount",
+  "extra_discount",
   "total_price",
   "payment_mode",
   "hard_copy_required",
@@ -46,7 +46,9 @@
   {
    "fieldname": "customer_name",
    "fieldtype": "Data",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Customer Name",
    "reqd": 1
   },
@@ -61,12 +63,18 @@
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Email",
+   "options": "Email"
   },
   {
    "fieldname": "mobile_number",
    "fieldtype": "Data",
+   "in_filter": 1,
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Mobile Number",
    "reqd": 1
   },
@@ -112,6 +120,8 @@
   {
    "fieldname": "appointment_date",
    "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Appointment Date",
    "reqd": 1
   },
@@ -174,7 +184,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "\nOrdered\nInprogress\nCompleted\nDSA\nRejected"
+   "options": "\nOrdered\nInprogress\nCollected\nCompleted\nDSA\nRejected\nAssigned"
   },
   {
    "fieldname": "affiliated_id",
@@ -210,27 +220,35 @@
    "label": "Discount"
   },
   {
+   "default": "UPI",
    "fieldname": "payment_mode",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Payment Mode",
-   "options": "\nUPI\nCash\nCard"
+   "options": "\nUPI\nCash\nCard",
+   "reqd": 1
   },
   {
    "fieldname": "source",
    "fieldtype": "Select",
    "label": "Source",
-   "options": "\nWalkin\nOnline\nCamp"
+   "options": "Sample Collected\nOnline"
+  },
+  {
+   "default": "0",
+   "fieldname": "extra_discount",
+   "fieldtype": "Currency",
+   "label": "Extra Discount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-28 10:05:17.978284",
+ "modified": "2026-01-22 16:15:19.858342",
  "modified_by": "Administrator",
  "module": "Bloodtestnearme",
  "name": "Order",
- "naming_rule": "Autoincrement",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

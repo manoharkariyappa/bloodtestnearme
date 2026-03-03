@@ -1,0 +1,181 @@
+<div style="max-width:650px;margin:0 auto;background:#ffffff;
+border:1px solid #e5e7eb;border-radius:8px;
+font-family:Arial,Helvetica,sans-serif;color:#111827;">
+
+<!-- ================= HEADER ================= -->
+<div style="padding:16px;border-bottom:1px solid #e5e7eb;">
+  <h2 style="margin:0 0 6px 0;font-size:18px;">
+    Confirmation of Diagnostic Test Appointment Cancellation
+  </h2>
+  <p style="margin:0;font-size:13px;">
+    Dear {{ doc.customer_name }},
+  </p>
+  <p style="margin:6px 0 0 0;font-size:13px;line-height:1.5;">
+    This is to confirm that, as per your request, your diagnostic test appointment has been cancelled successfully.
+    Please find the details of the cancelled appointment below for your records:
+  </p>
+  <p style="margin:6px 0 0 0;font-size:13px;line-height:1.5;">
+    Please find the details of the cancelled appointment below for your records:
+  </p>
+</div>
+
+<!-- ================= BENEFICIARY DETAILS ================= -->
+<div style="padding:14px;">
+  <div style="
+    border:1px solid #d3d3d3;
+    background:#f9fafb;
+    border-radius:6px;
+    padding:10px;
+  ">
+    <h3 style="margin:0 0 8px 0;font-size:15px;">
+      Beneficiary Details
+    </h3>
+
+{% if doc.customer_details and doc.customer_details|length > 1 %}
+<table width="100%" cellpadding="6" cellspacing="0">
+<tr>
+{% for row in doc.customer_details %}
+<td width="50%" valign="top">
+  <div style="
+    border:1px solid #e5e7eb;
+    background:#ffffff;
+    border-radius:6px;
+    padding:8px;
+  ">
+    <p style="margin:0;font-size:12px;line-height:1.4;">
+      <b>Name:</b> {{ row.get("beneficiary_name") or row.get("name1") }}<br>
+      <b>Age:</b> {{ row.age }} Years<br>
+      <b>Gender:</b> {{ row.gender }}
+    </p>
+  </div>
+</td>
+{% if loop.index is even %}</tr><tr>{% endif %}
+{% endfor %}
+</tr>
+</table>
+
+<p style="margin:8px 0 0 0;font-size:12px;line-height:1.4;">
+  <b>Phone:</b> {{ doc.mobile_number }}<br>
+  <b>Email:</b> {{ doc.email }}<br>
+  <b>Address:</b> {{ doc.address }}, {{ doc.pincode }}
+</p>
+
+{% else %}
+<p style="margin:0;font-size:12px;line-height:1.4;">
+  <b>Name:</b> {{ doc.customer_name }}<br>
+  <b>Age:</b> {{ doc.age }} Years<br>
+  <b>Gender:</b> {{ doc.gender }}<br>
+  <b>Phone:</b> {{ doc.mobile_number }}<br>
+  <b>Email:</b> {{ doc.email }}<br>
+  <b>Address:</b> {{ doc.address }}, {{ doc.pincode }}
+</p>
+{% endif %}
+  </div>
+</div>
+
+<!-- ================= APPOINTMENT DETAILS ================= -->
+<div style="padding:14px;">
+  <div style="
+    border:1px solid #d3d3d3;
+    background:#f9fafb;
+    border-radius:6px;
+    padding:10px;
+  ">
+    <h3 style="margin:0 0 8px 0;font-size:15px;">
+      Appointment Details
+    </h3>
+
+    <ul style="margin:0;padding-left:14px;font-size:12px;line-height:1.5;">
+      <li><b>Order ID:</b> {{ doc.name }}</li>
+      <li><b>Date:</b> {{ frappe.format_date(doc.appointment_date) }}</li>
+      <li><b>Time:</b> {{ doc.appointment_time }}</li>
+      <li><b>Test / Package:</b>
+        {% for item in doc.ordered_items %}
+          {{ item.name1 }}{% if not loop.last %}, {% endif %}
+        {% endfor %}
+      </li>
+      <li><b>Amount:</b> ₹{{ doc.total_price }}</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= PREPARATION INSTRUCTIONS ================= -->
+
+<!-- ================= FOOTER TEXT ================= -->
+<div style="padding:14px;font-size:12px;line-height:1.5;">
+  <p style="margin:0;">
+    Should you require any further assistance or wish to reschedule your appointment, please contact
+    our customer support team at your convenience. 
+  </p>
+  <p style="margin:6px 0 0 0;">
+    Thank you for choosing our diagnostic services. 
+  </p>
+  <p style="margin:6px 0 0 0;">
+    Best regards,<br>
+    <b>Customer Support Team</b>,<br>
+    Thyrocare <br>
+    (Triguna healthcare Services)
+    
+  </p>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<div style="background:#1e3a8a;padding:18px 12px;text-align:center;
+border-radius:0 0 8px 8px;">
+
+  <div style="margin-bottom:12px;">
+    <a href="tel:+919611011266"
+       style="background:#2563eb;color:#ffffff;text-decoration:none;
+       padding:8px 16px;border-radius:4px;font-size:12px;margin-right:6px;">
+      Call Now
+    </a>
+    <a href="https://wa.me/919611011266"
+       style="background:#22c55e;color:#ffffff;text-decoration:none;
+       padding:8px 16px;border-radius:4px;font-size:12px;">
+      WhatsApp
+    </a>
+  </div>
+
+ <div style="margin-bottom:14px;">
+  <a href="https://www.facebook.com/BloodTestNearme/" style="margin-right:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733547.png" width="20">
+  </a>
+
+  <a href="https://www.instagram.com/bloodtestnearme/" style="margin-right:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733558.png" width="20">
+  </a>
+
+  <a href="https://x.com/BloodTestNearMe/" style="margin-right:10px;">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733579.png" width="20">
+  </a>
+
+  <a href="https://www.linkedin.com/company/blood-test-near-me/">
+    <img src="https://cdn-icons-png.flaticon.com/24/733/733561.png" width="20">
+  </a>
+</div>
+
+
+  <div style="margin-bottom:8px;">
+    <img src="{{ frappe.utils.get_url() }}/files/trigunalogo.png"
+         style="max-width:160px;background:#ffffff;
+         padding:6px;border-radius:6px;">
+  </div>
+
+  <p style="margin:4px 0;font-size:11px;color:#dbeafe;">
+    © {{ frappe.utils.nowdate()[:4] }} Triguna Healthcare. All rights reserved.
+  </p>
+
+  <p style="margin:0;font-size:11px;color:#c7d2fe;">
+    Visit us:
+    <a href="https://www.trigunahealthcare.com"
+       style="color:#ffffff;text-decoration:none;">
+      www.trigunahealthcare.com
+    </a>
+  </p>
+
+  <p style="margin-top:6px;font-size:10px;color:#9ca3af;">
+    You received this email because you booked our services.
+  </p>
+</div>
+
+</div>

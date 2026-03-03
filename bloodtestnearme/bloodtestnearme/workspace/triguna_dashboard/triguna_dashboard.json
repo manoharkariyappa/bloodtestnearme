@@ -1,0 +1,62 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"bfNMhi40PF\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">                                           Triguna Dashboard</span>\",\"col\":12}},{\"id\":\"ctNMQkPoye\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"S1XFlXjE0g\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>                                            ONLINE ORDERS</b></span>\",\"col\":12}},{\"id\":\"MWq0nwqAtu\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Ordered\",\"col\":4}},{\"id\":\"vCa5uo4IpM\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Inprogress\",\"col\":4}},{\"id\":\"xOqWmFo1Ey\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Assigned\",\"col\":4}},{\"id\":\"hrMdAKL_E4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Collected\",\"col\":4}},{\"id\":\"Nw-3YfFwKs\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed\",\"col\":4}},{\"id\":\"UzXZ6GBvZq\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"DSA\",\"col\":4}},{\"id\":\"jj9ua3lPZv\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rejected\",\"col\":4}},{\"id\":\"tuI3eCOM6u\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"b2sKHGNMZL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>                                           OFFLINE ORDERS</b></span>\",\"col\":12}},{\"id\":\"VPg45TBlks\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"ordered\",\"col\":4}},{\"id\":\"oBSIugH2GZ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed\",\"col\":4}}]",
+ "creation": "2026-02-03 12:20:54.590236",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "dashboard",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Triguna Dashboard",
+ "links": [],
+ "modified": "2026-02-03 12:36:53.265827",
+ "modified_by": "Administrator",
+ "module": "Bloodtestnearme",
+ "name": "Triguna Dashboard",
+ "number_cards": [
+  {
+   "label": "Ordered",
+   "number_card_name": "Oreder"
+  },
+  {
+   "label": "Inprogress",
+   "number_card_name": "InProgress"
+  },
+  {
+   "label": "Assigned",
+   "number_card_name": "Assigned"
+  },
+  {
+   "label": "Collected",
+   "number_card_name": "Collected"
+  },
+  {
+   "label": "DSA",
+   "number_card_name": "DSA"
+  },
+  {
+   "label": "Rejected",
+   "number_card_name": "Rejected"
+  },
+  {
+   "label": "ordered",
+   "number_card_name": "Order-1"
+  },
+  {
+   "label": "Completed",
+   "number_card_name": "Completed-2"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 34.0,
+ "shortcuts": [],
+ "title": "Triguna Dashboard"
+}
