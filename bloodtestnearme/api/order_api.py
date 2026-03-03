@@ -156,6 +156,81 @@
 #         frappe.log_error(frappe.get_traceback(), "Create Order Error")
 #         return {"status": "error", "message": str(e)}
 
+import frappe
+
+@frappe.whitelist(allow_guest=True)
+def get_orders(status=None, order_type=None):
+
+    try:
+        filters = {}
+
+        if status:
+            filters["status"] = status
+
+        orders = frappe.get_all(
+            "Order",
+            filters=filters,
+            fields=[
+                "name",
+                "appointment_date",
+                "appointment_time",
+                "customer_name",
+                "pincode",
+                "total_price",
+                "mobile_number",
+                "status"
+            ],
+            order_by="creation desc"
+        )
+
+        return {
+            "status": "success",
+            "data": orders
+        }
+
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Get Orders Error")
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+
+import frappe
+@frappe.whitelist(allow_guest=True)
+def get_offline_orders(status=None):
+
+    try:
+        filters = {}
+
+        if status:
+            filters["status"] = status
+
+        orders = frappe.get_all(
+            "Offline Order",
+            filters=filters,
+            fields=[
+                "name",
+                "appointment_date",
+                "appointment_time",
+                "customer_name",
+                "total_price",
+                "mobile_number",
+                "status"
+            ],
+            order_by="creation desc"
+        )
+
+        return {
+            "status": "success",
+            "data": orders
+        }
+
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Get Orders Error")
+        return {
+            "status": "error",
+            "message": str(e)
+        }
 
 import json
 import frappe
