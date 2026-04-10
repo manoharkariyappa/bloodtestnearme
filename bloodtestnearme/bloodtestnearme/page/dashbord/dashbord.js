@@ -14,17 +14,24 @@ frappe.pages['dashbord'].on_page_load = function(wrapper) {
 			background: #f5f6f8;
 		}
 
+		/* ✅ Tabs + Button Row */
 		.order-tabs {
 			margin-bottom: 15px;
 			border-bottom: 1px solid #d1d8dd;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.tabs-left {
+			display: flex;
+			gap: 20px;
 		}
 
 		.order-tabs .tab {
-			margin-right: 25px;
 			cursor: pointer;
 			font-weight: 600;
 			padding-bottom: 8px;
-			display: inline-block;
 			color: #444;
 			font-size: 14px;
 		}
@@ -32,6 +39,22 @@ frappe.pages['dashbord'].on_page_load = function(wrapper) {
 		.order-tabs .active {
 			color: #2490ef;
 			border-bottom: 2px solid #2490ef;
+		}
+
+		/* ✅ Button Style */
+		.create-order-btn {
+			background: #2490ef;
+			color: white;
+			border: none;
+			padding: 6px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			font-weight: 600;
+			font-size: 13px;
+		}
+
+		.create-order-btn:hover {
+			background: #1b7cd6;
 		}
 
 		.filters {
@@ -78,17 +101,21 @@ frappe.pages['dashbord'].on_page_load = function(wrapper) {
 
 	<div class="orders-container">
 
+		<!-- ✅ Tabs + Button -->
 		<div class="order-tabs">
-    <span class="tab active" data-status="Ordered">NEW ORDERS</span>
-    <span class="tab" data-status="Completed">COMPLETED</span>
-    <span class="tab" data-status="Assigned">ASSIGNED</span>
-    <span class="tab" data-status="Collected">COLLECTED</span>
-    <span class="tab" data-status="Cancelled">CANCELLED</span>
-    <span class="tab" data-status="DSA">DSA</span>
-</div>
+			<div class="tabs-left">
+				<span class="tab active" data-status="Ordered">NEW ORDERS</span>
+				<span class="tab" data-status="Completed">COMPLETED</span>
+				<span class="tab" data-status="Assigned">ASSIGNED</span>
+				<span class="tab" data-status="Collected">COLLECTED</span>
+				<span class="tab" data-status="Cancelled">CANCELLED</span>
+				<span class="tab" data-status="DSA">DSA</span>
+			</div>
+
+			<button class="create-order-btn"> + Add Order</button>
+		</div>
 
 		<div class="filters">
-
 			<input type="text" id="search-box" class="filter-box" placeholder="Search...">
 		</div>
 
@@ -124,13 +151,7 @@ frappe.pages['dashbord'].on_page_load = function(wrapper) {
 		load_orders(status);
 	});
 
-	// ORDER TYPE FILTER
-	$(page.body).on("change", "#order-type-filter", function() {
-		let status = $(".tab.active").data("status");
-		load_orders(status);
-	});
-
-	// SEARCH (frontend only)
+	// SEARCH
 	$(page.body).on("keyup", "#search-box", function() {
 		let value = $(this).val().toLowerCase();
 		$("#orders-table tbody tr").filter(function() {
@@ -138,13 +159,14 @@ frappe.pages['dashbord'].on_page_load = function(wrapper) {
 		});
 	});
 
+	$(page.body).on("click", ".create-order-btn", function() {
+		frappe.set_route('/app/order/new-order');
+	});
 };
 
 
 // LOAD ORDERS FUNCTION
 function load_orders(status) {
-
-	// let order_type = $("#order-type-filter").val();
 
 	frappe.call({
 		method: "bloodtestnearme.api.order_api.get_orders",
